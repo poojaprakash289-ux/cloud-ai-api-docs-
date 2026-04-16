@@ -1,162 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pooja Prakash | Senior Technical Writer</title>
+  <title>Pooja Prakash</title>
 
   <style>
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
       margin: 0;
+      font-family: 'Segoe UI', Arial;
       background: #f4f6f8;
-      color: #333;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    .hero {
+    /* NAVBAR */
+    .navbar {
+      background: #1f2d3d;
+      padding: 15px;
       text-align: center;
-      padding: 50px 20px;
+    }
+
+    .navbar a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .navbar a:hover {
+      color: #00aaff;
+    }
+
+    /* HERO */
+    .hero {
+      background: url('hero-bg.jpg') center/cover;
+      color: white;
+      text-align: center;
+      padding: 140px 20px;
     }
 
     .hero h1 {
-      font-size: 36px;
-      color: #2c3e50;
+      font-size: 42px;
+    }
+
+    .hero p {
+      font-size: 18px;
     }
 
     .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 18px;
       background: #0073e6;
+      padding: 12px 18px;
       color: white;
-      border-radius: 6px;
       text-decoration: none;
+      border-radius: 6px;
+      margin: 8px;
+      display: inline-block;
     }
 
-    h2 {
-      margin-top: 40px;
-      color: #2c3e50;
+    .btn:hover {
+      background: #005bb5;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 50px 20px;
     }
 
     .card {
       background: white;
       padding: 20px;
-      margin-top: 15px;
       border-radius: 10px;
+      margin-top: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    a {
-      color: #0073e6;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    img {
-      width: 100%;
-      margin-top: 10px;
-      border-radius: 6px;
+    h2 {
+      color: #2c3e50;
     }
   </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Me</a>
+  <a href="experience.html">Work Experience</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact</a>
+</div>
 
-<!-- HERO -->
 <div class="hero">
   <h1>Pooja Prakash</h1>
-  <p><b>Senior Technical Writer | Cloud | API | AI Documentation</b></p>
+  <p>Senior Technical Writer</p>
+  <p>Bridging the Gap: From Tech Talk to Simple Speak!</p>
 
-  <a class="btn" href="Pooja-Prakash-Resume.pdf">📄 Resume</a>
-  <a class="btn" href="https://github.com/poojaprakash289-ux">💻 GitHub</a>
-  <a class="btn" href="YOUR_LINKEDIN_URL">🔗 LinkedIn</a>
+  <a class="btn" href="mailto:poojaprakash289@gmail.com">Email</a>
+  <a class="btn" href="tel:+919XXXXXXXXX">Call</a>
 </div>
 
-<!-- PROFILE -->
-<h2>👤 Profile</h2>
-<div class="card">
-Technical Writer with 5+ years of experience in enterprise documentation across cloud, API, and AI platforms. 
-Strong expertise in designing structured documentation systems, improving user experience, and aligning content with product workflows.
-</div>
+<div class="section">
+  <h2>Welcome</h2>
 
-<!-- EXPERIENCE -->
-<h2>💼 Experience</h2>
-<div class="card">
-<b>Corent Technology</b> (2025 – Present)<br>
-Working on cloud migration and AI-based documentation systems.
-</div>
-
-<div class="card">
-<b>Kyndryl</b> (2021 – 2022)<br>
-Handled enterprise storage documentation, onboarding guides, and decommission processes.
-</div>
-
-<div class="card">
-<b>IBM</b> (2019 – 2021)<br>
-Worked on technical documentation for enterprise systems and structured content development.
-</div>
-
-<!-- PROJECTS -->
-<h2>🚀 Projects</h2>
-
-<div class="grid">
-
-<div class="card">
-<b>🧠 Agentic AI Documentation</b><br>
-<ul>
-  <li>Designed AI workflow documentation</li>
-  <li>Improved clarity for complex decision flows</li>
-</ul>
-<a href="https://github.com/poojaprakash289-ux/tech-writing-portfolio">View →</a>
-<img src="agent-workflow.png">
-</div>
-
-<div class="card">
-<b>🔗 API Documentation</b><br>
-<ul>
-  <li>Created Swagger + Postman documentation</li>
-  <li>Improved developer experience</li>
-</ul>
-<a href="https://github.com/poojaprakash289-ux/tech-writing-portfolio">View →</a>
-</div>
-
-<div class="card">
-<b>☁️ Cloud Migration Docs</b><br>
-<ul>
-  <li>End-to-end onboarding documentation</li>
-  <li>Reduced dependency on support teams</li>
-</ul>
-<a href="https://github.com/poojaprakash289-ux/tech-writing-portfolio">View →</a>
-<img src="workflow.png">
-</div>
-
-</div>
-
-<!-- SKILLS -->
-<h2>🛠 Skills & Tools</h2>
-<div class="card">
-<b>Documentation:</b> DITA, Markdown, RoboHelp<br><br>
-<b>API Tools:</b> Postman, OpenAPI (Swagger)<br><br>
-<b>Platforms:</b> GitHub, SaaS, Cloud<br><br>
-<b>Design:</b> Snagit, Flow Diagrams, Architecture Diagrams
-</div>
-
-<!-- CONTACT -->
-<h2>📬 Contact</h2>
-<p>Email: poojaprakash289@gmail.com</p>
-
+  <div class="card">
+    Explore my work, experience, and documentation expertise across cloud, API, and AI domains.
+  </div>
 </div>
 
 </body>
