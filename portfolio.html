@@ -2,30 +2,73 @@
 <html>
 <head>
 <title>Portfolio</title>
+
+<style>
+body { margin:0; font-family:Segoe UI; background:#f4f6f8; }
+
+.hero {
+  height:300px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url('assets/images/hero-bg.jpg') center/cover;
+}
+
+.section { padding:60px; }
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card {
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 5px 12px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-5px);
+}
+
+a { text-decoration:none; color:#00aaff; }
+</style>
 </head>
 
 <body>
 
-<div class="navbar">
-  <a href="index.html">Home</a>
-  <a href="about.html">About Me</a>
-  <a href="experience.html">Work Experience</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="contact.html">Contact</a>
+<div class="hero">
+  <h1>Docs-as-Code Portfolio</h1>
 </div>
 
 <div class="section">
-  <h2>Portfolio</h2>
 
-  <div class="card">
-    Agentic AI Documentation<br>
-    <a href="https://github.com/poojaprakash289-ux">View →</a>
-  </div>
+<div class="grid">
 
-  <div class="card">
-    API Documentation<br>
-    <a href="https://github.com/poojaprakash289-ux">View →</a>
-  </div>
+<div class="card">
+<b>Agentic AI Documentation</b><br><br>
+AI workflow documentation with structured design.<br><br>
+<a href="projects/agentic-ai.html">View →</a>
+</div>
+
+<div class="card">
+<b>API Documentation</b><br><br>
+OpenAPI + Postman based developer docs.<br><br>
+<a href="projects/api-documentation.html">View →</a>
+</div>
+
+<div class="card">
+<b>Cloud Migration Docs</b><br><br>
+Scan → Assess → Migrate workflows.<br><br>
+<a href="projects/cloud-migration.html">View →</a>
+</div>
+
+</div>
 
 </div>
 
