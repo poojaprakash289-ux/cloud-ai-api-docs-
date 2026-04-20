@@ -2,202 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Experience | Pooja Prakash</title>
+  <title>Work Experience | Pooja Prakash</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f9fafc;
+      background: #fdfdfd;
       color: #333;
       line-height: 1.6;
     }
 
-    /* NAVBAR */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px 50px;
-      background: linear-gradient(90deg, #00aaff, #0066cc);
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
-    .navbar b { font-size: 20px; }
-    .navbar a {
-      text-decoration: none;
-      margin-left: 20px;
-      color: white;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-    .navbar a:hover { color: #ffd700; }
 
-    /* SECTION */
-    .section { padding: 60px 50px; }
-    .section h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 30px;
-      color: #0066cc;
+    h1 {
+      color: #008080;
+      margin-bottom: 25px;
     }
-    .section p.section-intro {
-      text-align: center;
+
+    .timeline {
+      border-left: 3px solid #008080;
+      padding-left: 20px;
+    }
+
+    .timeline-item {
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -11px;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      background: #20b2aa;
+      border-radius: 50%;
+    }
+
+    .timeline-item h2 {
+      margin: 0;
+      font-size: 20px;
+      color: #ffd700;
+    }
+
+    .timeline-item h3 {
+      margin: 5px 0;
+      font-size: 16px;
+      color: #008080;
+    }
+
+    .timeline-item span {
+      font-size: 14px;
       color: #555;
-      margin-bottom: 40px;
-      font-size: 16px;
     }
 
-    /* TABLE */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 40px;
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    .timeline-item ul {
+      margin: 10px 0 0;
+      padding-left: 20px;
     }
-    th, td {
-      padding: 14px 18px;
-      text-align: left;
-      border-bottom: 1px solid #eee;
-    }
-    th {
-      background: #00aaff;
-      color: white;
-      font-size: 16px;
-    }
-    tr:hover td {
-      background: #f0f8ff;
-      transition: background 0.3s ease;
-    }
-    tr:last-child td { border-bottom: none; }
 
-    /* Footer */
+    .timeline-item ul li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
     .footer {
       text-align: center;
-      padding: 40px;
+      padding: 20px;
       background: #1f2d3d;
       color: white;
+      margin-top: 40px;
     }
+
     .footer a {
-      color: #00aaff;
+      color: #20b2aa;
       margin: 0 10px;
       text-decoration: none;
-      transition: color 0.3s ease;
     }
-    .footer a:hover { color: #ffd700; }
+
+    .footer a:hover {
+      color: #ffd700;
+    }
   </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<div class="navbar">
-  <b>Pooja Prakash</b>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="experience.html">Experience</a>
-    <a href="skills.html">Skills</a>
-    <a href="education.html">Education</a>
-    <a href="contact.html">Contact</a>
+<div class="container">
+  <h1>Work Experience</h1>
+
+  <div class="timeline">
+
+    <!-- Corent Technology -->
+    <div class="timeline-item">
+      <h2>Corent Technology – Chennai</h2>
+      <h3>Technical Writer</h3>
+      <span>Sep 2024 – Present</span>
+      <ul>
+        <li>Develop documentation for cloud-based MaaS (Scan, Assessment, Migration) platform.</li>
+        <li>Create Web Help using RoboHelp aligned with structured documentation standards.</li>
+        <li>Author user guides, prerequisites, release notes, and internal process documentation.</li>
+        <li>Prepare customer-facing collateral including sell sheets, solution briefs, and case studies.</li>
+        <li>Design architecture diagrams and workflow visuals to support customer and internal teams.</li>
+        <li>Coordinate with product, engineering, and sales teams to align documentation with release schedules.</li>
+        <li>Utilize AI tools to accelerate first drafts and improve turnaround time by 25–30% while ensuring accuracy.</li>
+      </ul>
+    </div>
+
+    <!-- IBM / Kyndryl -->
+    <div class="timeline-item">
+      <h2>IBM / Kyndryl – Chennai</h2>
+      <h3>Technical Writer</h3>
+      <span>Mar 2019 – Oct 2022</span>
+      <p><em>Project: Anthem (Enterprise Storage Environment)</em></p>
+      <ul>
+        <li>Documented and managed enterprise storage environments supporting critical operations.</li>
+        <li>Created standardized templates and onboarding checklists for IBM storage devices (SVC, XIV, Flash, V7000, A9k) and Brocade switches.</li>
+        <li>Authored user guides, FAQs, troubleshooting documents, and operational runbooks.</li>
+        <li>Documented hardware replacement procedures (HBA, SFP, cables) and decommissioning workflows.</li>
+        <li>Allocated switch ports for new build servers and maintained accurate documentation records.</li>
+        <li>Collaborated with 7+ SMEs to ensure accuracy and compliance with enterprise standards.</li>
+        <li>Participated in storage team calls with multiple stakeholders to support allocation and decommissioning activities.</li>
+        <li>Trained freshers on storage concepts, operational procedures, and documentation standards.</li>
+        <li>Ensured documentation alignment with SLA requirements and governance processes.</li>
+      </ul>
+    </div>
+
   </div>
 </div>
 
-<!-- WORK EXPERIENCE -->
-<div class="section" id="experience">
-  <h2>Work Experience</h2>
-  <p class="section-intro">Detailed responsibilities across organizations.</p>
-
-  <table>
-    <tr><th>Role</th><th>Organization</th><th>Period</th><th>Highlights</th></tr>
-    <tr>
-      <td>Technical Writer</td>
-      <td>Corent Technology – Chennai</td>
-      <td>Sep 2024 – Present</td>
-      <td>
-        • Documentation for MaaS platform<br>
-        • Web Help with RoboHelp<br>
-        • Guides, release notes, internal docs<br>
-        • Customer collateral (briefs, case studies)<br>
-        • Architecture diagrams & visuals<br>
-        • AI tools to accelerate drafts by 25–30%
-      </td>
-    </tr>
-    <tr>
-      <td>Technical Writer</td>
-      <td>IBM / Kyndryl – Chennai</td>
-      <td>Mar 2019 – Oct 2022</td>
-      <td>
-        • Documented enterprise storage environments<br>
-        • Templates & onboarding checklists<br>
-        • User guides, FAQs, troubleshooting docs<br>
-        • Hardware replacement workflows<br>
-        • Collaborated with SMEs<br>
-        • Trained freshers on storage concepts
-      </td>
-    </tr>
-  </table>
-</div>
-
-<!-- SKILLS & TOOLS -->
-<div class="section" id="skills">
-  <h2>Skills & Tools</h2>
-  <p class="section-intro">Core competencies and technical expertise.</p>
-
-  <table>
-    <tr><th>Skill</th><th>Level</th><th>Notes</th></tr>
-    <tr><td>Technical Documentation</td><td>⭐⭐⭐⭐⭐</td><td>User guides, release notes, API docs</td></tr>
-    <tr><td>Docs-as-Code</td><td>⭐⭐⭐⭐</td><td>DITA XML, structured publishing</td></tr>
-    <tr><td>Editing & Proofreading</td><td>⭐⭐⭐⭐</td><td>Peer reviews, clarity improvements</td></tr>
-    <tr><td>Collaboration Tools</td><td>⭐⭐⭐⭐⭐</td><td>Jira, Confluence, GitHub</td></tr>
-    <tr><td>Technical Exposure</td><td>⭐⭐⭐⭐</td><td>IBM Storage, Brocade, SaaS platforms</td></tr>
-  </table>
-</div>
-
-<!-- CERTIFICATIONS -->
-<div class="section" id="certifications">
-  <h2>Certifications</h2>
-  <table>
-    <tr><th>Certification</th><th>Notes</th></tr>
-    <tr><td>ISTQB – Foundation Level</td><td>Software testing fundamentals</td></tr>
-    <tr><td>FinOps Foundation</td><td>Cloud financial operations</td></tr>
-    <tr><td>Google Certification</td><td>Cloud/technical specialization</td></tr>
-    <tr><td>C Programming Workshop</td><td>Programming fundamentals</td></tr>
-  </table>
-</div>
-
-<!-- EDUCATION -->
-<div class="section" id="education">
-  <h2>Education</h2>
-  <table>
-    <tr><th>Degree</th><th>Institution</th><th>Notes</th></tr>
-    <tr><td>B.Tech – Computer Engineering</td><td>S.P.B Patel Engineering College, Mahesana</td><td>Core engineering foundation</td></tr>
-    <tr><td>Higher Secondary (CBSE)</td><td>Coast Guard Public School, Daman</td><td>Science stream</td></tr>
-    <tr><td>Secondary School (CBSE)</td><td>Coast Guard Public School, Daman</td><td>General education</td></tr>
-  </table>
-</div>
-
-<!-- LANGUAGES -->
-<div class="section" id="languages">
-  <h2>Languages</h2>
-  <table>
-    <tr><th>Language</th><th>Level</th><th>Notes</th></tr>
-    <tr><td>English</td><td>⭐⭐⭐⭐⭐</td><td>Primary professional language, C2 level</td></tr>
-    <tr><td>Hindi</td><td>⭐⭐⭐⭐</td><td>Fluent, used in collaboration</td></tr>
-    <tr><td>Gujarati</td><td>⭐⭐⭐</td><td>Conversational, regional familiarity</td></tr>
-  </table>
-</div>
-
-<!-- FOOTER -->
 <div class="footer">
-  <p>© 2026 Pooja Prakash | Senior Technical Writer</p>
-  <p>
-    <a href="resume.pdf">Download Resume</a> |
-    <a href="https://linkedin.com/in/poojaprakash">LinkedIn</a> |
-    <a href="https://github.com/poojaprakash">GitHub</a>
-  </p>
+  © 2026 Pooja Prakash | Senior Technical Writer
+  <br>
+  <a href="mailto:poojaprakash289@example.com">Email</a> |
+  <a href="https://linkedin.com/in/poojaprakash">LinkedIn</a> |
+  <a href="https://github.com/poojaprakash">GitHub</a>
 </div>
 
 </body>
