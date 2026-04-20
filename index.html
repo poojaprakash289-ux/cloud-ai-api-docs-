@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pooja Prakash | Senior Technical Writer</title>
+  <title>Experience | Pooja Prakash</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f4f6f8;
+      background: #fdfdfd;
       color: #333;
       line-height: 1.6;
     }
@@ -17,190 +17,78 @@
     .navbar {
       display: flex;
       justify-content: space-between;
-      align-items: center;
       padding: 20px 50px;
-      background: white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      background: linear-gradient(90deg, #008080, #20b2aa);
+      color: white;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
-    .navbar b {
-      font-size: 20px;
-      color: #00aaff;
-    }
+    .navbar b { font-size: 20px; }
     .navbar a {
       text-decoration: none;
       margin-left: 20px;
-      color: #333;
+      color: white;
       font-weight: 500;
+      transition: color 0.3s ease;
     }
-    .navbar a:hover {
-      color: #00aaff;
-    }
-
-    /* HERO */
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 80px 50px;
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
-                  url('assets/images/hero-bg.jpg') center/cover;
-      color: white;
-    }
-    .hero-text {
-      max-width: 50%;
-    }
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 20px;
-    }
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-    .btn {
-      padding: 12px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      margin-right: 10px;
-      display: inline-block;
-      transition: background 0.3s ease;
-    }
-    .btn-primary {
-      background: #00aaff;
-      color: white;
-    }
-    .btn-primary:hover {
-      background: #0088cc;
-    }
-    .btn-outline {
-      border: 1px solid white;
-      color: white;
-    }
-    .btn-outline:hover {
-      background: white;
-      color: #333;
-    }
+    .navbar a:hover { color: #ffd700; }
 
     /* SECTION */
-    .section {
-      padding: 60px 50px;
-    }
+    .section { padding: 60px 50px; }
     .section h2 {
       text-align: center;
       margin-bottom: 20px;
-      font-size: 28px;
-      color: #1f2d3d;
+      font-size: 30px;
+      color: #008080;
     }
     .section p.section-intro {
       text-align: center;
-      color: #555;
+      color: #666;
       margin-bottom: 40px;
       font-size: 16px;
     }
 
-    /* STATS */
-    .stats {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
       background: white;
-      margin: 0 auto 40px;
-      padding: 25px;
       border-radius: 10px;
+      overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      max-width: 1000px;
     }
-    .stat {
-      text-align: center;
-      flex: 1 1 200px;
-      margin: 15px;
+    th, td {
+      padding: 14px 18px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
     }
-    .stat h2 {
-      color: #00aaff;
-      font-size: 28px;
-      margin-bottom: 5px;
+    th {
+      background: #008080;
+      color: white;
+      font-size: 16px;
     }
-    .stat p {
-      font-size: 15px;
-      color: #555;
+    tr:hover td {
+      background: #faf0e6; /* light warm beige */
+      transition: background 0.3s ease;
     }
+    tr:last-child td { border-bottom: none; }
 
-    /* WHAT I DO */
-    .what-i-do {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      text-align: center;
-    }
-    .do-card {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .do-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-    }
-    .do-card img {
-      width: 80px;
-      margin-bottom: 20px;
-    }
-    .do-card h3 {
-      margin-bottom: 15px;
-      color: #00aaff;
-      font-size: 20px;
-    }
-    .do-card p {
-      font-size: 15px;
-      color: #555;
-    }
-
-    /* ABOUT */
-    .about {
-      display: flex;
-      gap: 40px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .about img {
-      width: 220px;
-      border-radius: 12px;
-    }
-    .about div {
-      flex: 1;
-    }
-
-    /* FOOTER */
+    /* Footer */
     .footer {
       text-align: center;
       padding: 40px;
-      background: #1f2d3d;
+      background: #333;
       color: white;
     }
     .footer a {
-      color: #00aaff;
+      color: #20b2aa;
       margin: 0 10px;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
-    .footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsive tweaks */
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-      .hero-text {
-        max-width: 100%;
-      }
-    }
+    .footer a:hover { color: #ffd700; }
   </style>
 </head>
 <body>
@@ -209,77 +97,97 @@
 <div class="navbar">
   <b>Pooja Prakash</b>
   <div>
-    <a href="about.html">About</a>
+    <a href="index.html">Home</a>
     <a href="experience.html">Experience</a>
-    <a href="portfolio.html">Portfolio</a>
+    <a href="skills.html">Skills</a>
+    <a href="education.html">Education</a>
     <a href="contact.html">Contact</a>
   </div>
 </div>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-text">
-    <h1>Bridging the Gap: From Tech Talk to Simple Speak</h1>
-    <p>I design enterprise-grade documentation for Cloud, API, and AI systems — helping teams improve adoption and reduce support dependency.</p>
-    <a class="btn btn-primary" href="portfolio.html">View Docs-as-Code Portfolio</a>
-    <a class="btn btn-outline" href="mailto:poojaprakash289@example.com">Contact Me</a>
-  </div>
+<!-- WORK EXPERIENCE -->
+<div class="section" id="experience">
+  <h2>Work Experience</h2>
+  <p class="section-intro">Detailed responsibilities across organizations.</p>
+
+  <table>
+    <tr><th>Role</th><th>Organization</th><th>Period</th><th>Highlights</th></tr>
+    <tr>
+      <td>Technical Writer</td>
+      <td>Corent Technology – Chennai</td>
+      <td>Sep 2024 – Present</td>
+      <td>
+        • Documentation for MaaS platform<br>
+        • Web Help with RoboHelp<br>
+        • Guides, release notes, internal docs<br>
+        • Customer collateral (briefs, case studies)<br>
+        • Architecture diagrams & visuals<br>
+        • AI tools to accelerate drafts by 25–30%
+      </td>
+    </tr>
+    <tr>
+      <td>Technical Writer</td>
+      <td>IBM / Kyndryl – Chennai</td>
+      <td>Mar 2019 – Oct 2022</td>
+      <td>
+        • Documented enterprise storage environments<br>
+        • Templates & onboarding checklists<br>
+        • User guides, FAQs, troubleshooting docs<br>
+        • Hardware replacement workflows<br>
+        • Collaborated with SMEs<br>
+        • Trained freshers on storage concepts
+      </td>
+    </tr>
+  </table>
 </div>
 
-<!-- CAREER HIGHLIGHTS -->
-<div class="section">
-  <h2>Career Highlights</h2>
-  <p class="section-intro">
-    A quick snapshot of my experience and impact in Cloud, API, and AI documentation.
-  </p>
-  <div class="stats">
-    <div class="stat">
-      <h2>5+</h2>
-      <p>Years in Cloud & AI Docs</p>
-    </div>
-    <div class="stat">
-      <h2>20+</h2>
-      <p>Enterprise Projects Delivered</p>
-    </div>
-    <div class="stat">
-      <h2>10+</h2>
-      <p>Tools Mastered (DITA, Swagger, Postman)</p>
-    </div>
-    <div class="stat">
-      <h2>100%</h2>
-      <p>Reviewer-Ready Quality</p>
-    </div>
-  </div>
+<!-- SKILLS & TOOLS -->
+<div class="section" id="skills">
+  <h2>Skills & Tools</h2>
+  <p class="section-intro">Core competencies and technical expertise.</p>
+
+  <table>
+    <tr><th>Skill</th><th>Level</th><th>Notes</th></tr>
+    <tr><td>Technical Documentation</td><td>⭐⭐⭐⭐⭐</td><td>User guides, release notes, API docs</td></tr>
+    <tr><td>Docs-as-Code</td><td>⭐⭐⭐⭐</td><td>DITA XML, structured publishing</td></tr>
+    <tr><td>Editing & Proofreading</td><td>⭐⭐⭐⭐</td><td>Peer reviews, clarity improvements</td></tr>
+    <tr><td>Collaboration Tools</td><td>⭐⭐⭐⭐⭐</td><td>Jira, Confluence, GitHub</td></tr>
+    <tr><td>Technical Exposure</td><td>⭐⭐⭐⭐</td><td>IBM Storage, Brocade, SaaS platforms</td></tr>
+  </table>
 </div>
 
-<!-- WHAT I DO -->
-<div class="section">
-  <h2>What I Do</h2>
-  <p class="section-intro">I simplify complexity through clear writing, structured content, and user-friendly experiences.</p>
-  <div class="what-i-do">
-    <div class="do-card">
-      <h3>Technical Writing</h3>
-      <p>I transform “geek speak” into clear, accessible guides and manuals that make complex systems easy to understand.</p>
-    </div>
-    <div class="do-card">
-      <h3>Information Architecture</h3>
-      <p>I organize content into intuitive structures, ensuring users find the information they need without confusion.</p>
-    </div>
-    <div class="do-card">
-      <h3>UX Writing</h3>
-      <p>I craft microcopy that guides users seamlessly, turning potential confusion into clarity and confidence.</p>
-    </div>
-  </div>
+<!-- CERTIFICATIONS -->
+<div class="section" id="certifications">
+  <h2>Certifications</h2>
+  <table>
+    <tr><th>Certification</th><th>Notes</th></tr>
+    <tr><td>ISTQB – Foundation Level</td><td>Software testing fundamentals</td></tr>
+    <tr><td>FinOps Foundation</td><td>Cloud financial operations</td></tr>
+    <tr><td>Google Certification</td><td>Cloud/technical specialization</td></tr>
+    <tr><td>C Programming Workshop</td><td>Programming fundamentals</td></tr>
+  </table>
 </div>
 
-<!-- ABOUT -->
-<div class="section about">
-  <img src="assets/images/profile.jpg" alt="Pooja Prakash">
-  <div>
-    <h2>About Me</h2>
-    <p>Senior Technical Writer with 5+ years of experience at IBM, Kyndyl, and Corent Technology. Specialized in Cloud, API, and AI documentation with expertise in Docs-as-Code publishing and DITA XML.</p>
-    <p>I help enterprises scale documentation that accelerates adoption, reduces support costs, and showcases innovation.</p>
-  </div>
+<!-- EDUCATION -->
+<div class="section" id="education">
+  <h2>Education</h2>
+  <table>
+    <tr><th>Degree</th><th>Institution</th><th>Notes</th></tr>
+    <tr><td>B.Tech – Computer Engineering</td><td>S.P.B Patel Engineering College, Mahesana</td><td>Core engineering foundation</td></tr>
+    <tr><td>Higher Secondary (CBSE)</td><td>Coast Guard Public School, Daman</td><td>Science stream</td></tr>
+    <tr><td>Secondary School (CBSE)</td><td>Coast Guard Public School, Daman</td><td>General education</td></tr>
+  </table>
+</div>
+
+<!-- LANGUAGES -->
+<div class="section" id="languages">
+  <h2>Languages</h2>
+  <table>
+    <tr><th>Language</th><th>Level</th><th>Notes</th></tr>
+    <tr><td>English</td><td>⭐⭐⭐⭐⭐</td><td>Primary professional language, C2 level</td></tr>
+    <tr><td>Hindi</td><td>⭐⭐⭐⭐</td><td>Fluent, used in collaboration</td></tr>
+    <tr><td>Gujarati</td><td>⭐⭐⭐</td><td>Conversational, regional familiarity</td></tr>
+  </table>
 </div>
 
 <!-- FOOTER -->
