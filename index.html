@@ -1,3 +1,8 @@
+Perfect — let’s wire this into your portfolio site so recruiters can click **Work Experience** and see detailed responsibilities, plus dedicated sections for **Skills & Tools**, **Certifications**, and **Education**.  
+
+Here’s the **full updated `index.html`** with clear placement notes:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,182 +30,46 @@
       top: 0;
       z-index: 1000;
     }
-    .navbar b {
-      font-size: 20px;
-      color: #00aaff;
-    }
-    .navbar a {
-      text-decoration: none;
-      margin-left: 20px;
-      color: #333;
-      font-weight: 500;
-    }
-    .navbar a:hover {
-      color: #00aaff;
-    }
+    .navbar b { font-size: 20px; color: #00aaff; }
+    .navbar a { text-decoration: none; margin-left: 20px; color: #333; font-weight: 500; }
+    .navbar a:hover { color: #00aaff; }
 
     /* HERO */
     .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       padding: 80px 50px;
       background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
                   url('assets/images/hero-bg.jpg') center/cover;
       color: white;
+      text-align: center;
     }
-    .hero-text {
-      max-width: 50%;
-    }
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 20px;
-    }
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-    .btn {
-      padding: 12px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      margin-right: 10px;
-      display: inline-block;
-      transition: background 0.3s ease;
-    }
-    .btn-primary {
-      background: #00aaff;
-      color: white;
-    }
-    .btn-primary:hover {
-      background: #0088cc;
-    }
-    .btn-outline {
-      border: 1px solid white;
-      color: white;
-    }
-    .btn-outline:hover {
-      background: white;
-      color: #333;
-    }
+    .hero h1 { font-size: 42px; margin-bottom: 20px; }
+    .hero p { font-size: 18px; margin-bottom: 30px; }
+    .btn { padding: 12px 20px; border-radius: 5px; text-decoration: none; margin: 5px; display: inline-block; }
+    .btn-primary { background: #00aaff; color: white; }
+    .btn-primary:hover { background: #0088cc; }
+    .btn-outline { border: 1px solid white; color: white; }
+    .btn-outline:hover { background: white; color: #333; }
 
     /* SECTION */
-    .section {
-      padding: 60px 50px;
-    }
-    .section h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 28px;
-      color: #1f2d3d;
-    }
-    .section p.section-intro {
-      text-align: center;
-      color: #555;
-      margin-bottom: 40px;
-      font-size: 16px;
-    }
+    .section { padding: 60px 50px; }
+    .section h2 { text-align: center; margin-bottom: 20px; font-size: 28px; color: #1f2d3d; }
+    .section p.section-intro { text-align: center; color: #555; margin-bottom: 40px; }
 
-    /* STATS */
-    .stats {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      background: white;
-      margin: 0 auto 40px;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      max-width: 1000px;
-    }
-    .stat {
-      text-align: center;
-      flex: 1 1 200px;
-      margin: 15px;
-    }
-    .stat h2 {
-      color: #00aaff;
-      font-size: 28px;
-      margin-bottom: 5px;
-    }
-    .stat p {
-      font-size: 15px;
-      color: #555;
-    }
+    /* Accordion for Work Experience */
+    .accordion-item { margin-bottom: 10px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .accordion-header { background: #00aaff; color: white; padding: 15px; font-weight: bold; cursor: pointer; border: none; width: 100%; text-align: left; }
+    .accordion-content { display: none; background: white; padding: 15px 20px; }
+    .accordion-content ul { margin: 0; padding-left: 20px; }
 
-    /* WHAT I DO */
-    .what-i-do {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      text-align: center;
-    }
-    .do-card {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .do-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-    }
-    .do-card img {
-      width: 80px;
-      margin-bottom: 20px;
-    }
-    .do-card h3 {
-      margin-bottom: 15px;
-      color: #00aaff;
-      font-size: 20px;
-    }
-    .do-card p {
-      font-size: 15px;
-      color: #555;
-    }
+    /* Grid Cards */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 6px 14px rgba(0,0,0,0.08); }
+    .card h3 { color: #00aaff; margin-bottom: 10px; }
 
-    /* ABOUT */
-    .about {
-      display: flex;
-      gap: 40px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .about img {
-      width: 220px;
-      border-radius: 12px;
-    }
-    .about div {
-      flex: 1;
-    }
-
-    /* FOOTER */
-    .footer {
-      text-align: center;
-      padding: 40px;
-      background: #1f2d3d;
-      color: white;
-    }
-    .footer a {
-      color: #00aaff;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    .footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsive tweaks */
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-      .hero-text {
-        max-width: 100%;
-      }
-    }
+    /* Footer */
+    .footer { text-align: center; padding: 40px; background: #1f2d3d; color: white; }
+    .footer a { color: #00aaff; margin: 0 10px; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -209,81 +78,94 @@
 <div class="navbar">
   <b>Pooja Prakash</b>
   <div>
-    <a href="about.html">About</a>
-    <a href="experience.html">Experience</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
   </div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-text">
-    <h1>Bridging the Gap: From Tech Talk to Simple Speak</h1>
-    <p>I design enterprise-grade documentation for Cloud, API, and AI systems — helping teams improve adoption and reduce support dependency.</p>
-    <a class="btn btn-primary" href="portfolio.html">View Docs-as-Code Portfolio</a>
-    <a class="btn btn-outline" href="mailto:poojaprakash289@example.com">Contact Me</a>
-  </div>
+  <h1>Bridging the Gap: From Tech Talk to Simple Speak</h1>
+  <p>I design enterprise-grade documentation for Cloud, API, and AI systems — helping teams improve adoption and reduce support dependency.</p>
+  <a class="btn btn-primary" href="#portfolio">View Docs-as-Code Portfolio</a>
+  <a class="btn btn-outline" href="mailto:poojaprakash289@example.com">Contact Me</a>
 </div>
 
-<!-- CAREER HIGHLIGHTS -->
-<div class="section">
-  <h2>Career Highlights</h2>
-  <p class="section-intro">
-    A quick snapshot of my experience and impact in Cloud, API, and AI documentation.
-  </p>
-  <div class="stats">
-    <div class="stat">
-      <h2>5+</h2>
-      <p>Years in Cloud & AI Docs</p>
-    </div>
-    <div class="stat">
-      <h2>20+</h2>
-      <p>Enterprise Projects Delivered</p>
-    </div>
-    <div class="stat">
-      <h2>10+</h2>
-      <p>Tools Mastered (DITA, Swagger, Postman)</p>
-    </div>
-    <div class="stat">
-      <h2>100%</h2>
-      <p>Reviewer-Ready Quality</p>
-    </div>
-  </div>
-</div>
+<!-- WORK EXPERIENCE -->
+<div class="section" id="experience">
+  <h2>Work Experience</h2>
+  <p class="section-intro">Click each role to see detailed responsibilities.</p>
 
-<!-- WHAT I DO -->
-<div class="section">
-  <h2>What I Do</h2>
-  <p class="section-intro">I simplify complexity through clear writing, structured content, and user-friendly experiences.</p>
-  <div class="what-i-do">
-    <div class="do-card">
-      <h3>Technical Writing</h3>
-      <p>I transform “geek speak” into clear, accessible guides and manuals that make complex systems easy to understand.</p>
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-header">Technical Writer – Corent Technology (Sep 2024 – Present)</button>
+      <div class="accordion-content">
+        <ul>
+          <li>Develop documentation for cloud-based MaaS platform.</li>
+          <li>Create Web Help using RoboHelp aligned with standards.</li>
+          <li>Author guides, release notes, and internal docs.</li>
+          <li>Prepare customer-facing collateral (sell sheets, briefs).</li>
+          <li>Develop diagrams and workflow visuals.</li>
+          <li>Coordinate with product, engineering, and sales teams.</li>
+          <li>Utilize AI tools to accelerate drafts by 25–30%.</li>
+        </ul>
+      </div>
     </div>
-    <div class="do-card">
-      <h3>Information Architecture</h3>
-      <p>I organize content into intuitive structures, ensuring users find the information they need without confusion.</p>
-    </div>
-    <div class="do-card">
-      <h3>UX Writing</h3>
-      <p>I craft microcopy that guides users seamlessly, turning potential confusion into clarity and confidence.</p>
+
+    <div class="accordion-item">
+      <button class="accordion-header">Technical Writer – IBM / Kyndryl (Mar 2019 – Oct 2022)</button>
+      <div class="accordion-content">
+        <ul>
+          <li>Documented enterprise storage environments.</li>
+          <li>Created templates and onboarding checklists.</li>
+          <li>Authored guides, FAQs, troubleshooting docs.</li>
+          <li>Documented hardware replacement and workflows.</li>
+          <li>Collaborated with SMEs for accuracy.</li>
+          <li>Trained freshers on storage concepts.</li>
+          <li>Ensured SLA and governance compliance.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- ABOUT -->
-<div class="section about">
-  <img src="assets/images/profile.jpg" alt="Pooja Prakash">
-  <div>
-    <h2>About Me</h2>
-    <p>Senior Technical Writer with 5+ years of experience at IBM, Kyndyl, and Corent Technology. Specialized in Cloud, API, and AI documentation with expertise in Docs-as-Code publishing and DITA XML.</p>
-    <p>I help enterprises scale documentation that accelerates adoption, reduces support costs, and showcases innovation.</p>
+<!-- SKILLS -->
+<div class="section" id="skills">
+  <h2>Skills & Tools</h2>
+  <div class="grid">
+    <div class="card"><h3>Documentation & Content</h3><p>User Guides, Release Notes, API Docs, SOPs, Case Studies</p></div>
+    <div class="card"><h3>Documentation Tools</h3><p>RoboHelp, Oxygen XML (DITA), MS Office, Snagit, Adobe</p></div>
+    <div class="card"><h3>Collaboration & Tracking</h3><p>Jira, Confluence, GitHub</p></div>
+    <div class="card"><h3>Technical Exposure</h3><p>IBM Storage, Brocade Switches, Linux, Windows, AIX, NAS, Cloud SaaS</p></div>
   </div>
+</div>
+
+<!-- CERTIFICATIONS -->
+<div class="section" id="certifications">
+  <h2>Certifications</h2>
+  <ul>
+    <li>ISTQB – Foundation Level</li>
+    <li>FinOps Foundation Certification</li>
+    <li>Google Certification</li>
+    <li>C Programming Workshop</li>
+  </ul>
+</div>
+
+<!-- EDUCATION -->
+<div class="section" id="education">
+  <h2>Education</h2>
+  <ul>
+    <li><strong>B.Tech – Computer Engineering</strong>, S.P.B Patel Engineering College, Mahesana</li>
+    <li><strong>Higher Secondary (CBSE)</strong>, Coast Guard Public School, Daman</li>
+    <li><strong>Secondary School (CBSE)</strong>, Coast Guard Public School, Daman</li>
+  </ul>
 </div>
 
 <!-- FOOTER -->
-<div class="footer">
+<div class="footer" id="contact">
   <p>© 2026 Pooja Prakash | Senior Technical Writer</p>
   <p>
     <a href="resume.pdf">Download Resume</a> |
@@ -292,5 +174,10 @@
   </p>
 </div>
 
-</body>
-</html>
+<script>
+  // Accordion toggle
+  const headers = document.querySelectorAll('.accordion-header');
+  headers.forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      content.style.display
