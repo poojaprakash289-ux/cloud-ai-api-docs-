@@ -1,131 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Pooja Prakash | Senior Technical Writer</title>
+<title>Pooja Prakash</title>
 
 <style>
-body {
-  margin:0;
-  font-family: 'Segoe UI', sans-serif;
-  color:white;
-}
+body { margin:0; font-family:Segoe UI; color:white; }
 
-/* NAVBAR */
 .navbar {
   display:flex;
   justify-content:space-between;
-  align-items:center;
   padding:20px 60px;
   background:rgba(0,0,0,0.7);
   position:absolute;
   width:100%;
-  top:0;
 }
 
-.navbar a {
-  color:white;
-  margin-left:25px;
-  text-decoration:none;
-  font-size:14px;
-}
+.navbar a { color:white; margin-left:20px; text-decoration:none; }
 
-.navbar a:hover {
-  color:#00aaff;
-}
-
-/* HERO */
 .hero {
   height:100vh;
   display:flex;
-  flex-direction:column;
   align-items:center;
-  justify-content:center;
-  text-align:center;
-
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-              url('assets/images/hero-bg.jpg') center/cover;
-  padding-top:80px;
+  justify-content:space-between;
+  padding:0 80px;
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+             url('assets/images/hero-bg.jpg') center/cover;
 }
 
-/* TEXT */
-.hero h1 {
-  font-size:48px;
-  margin-bottom:15px;
-}
-
-.hero p {
-  max-width:700px;
-  color:#cbd5e1;
-  line-height:1.6;
-}
-
-/* BUTTONS */
-.cta-buttons {
-  margin-top:40px;
-}
+.hero-text { max-width:500px; }
 
 .btn {
-  padding:12px 22px;
+  padding:12px 20px;
   margin:10px;
-  border-radius:6px;
-  text-decoration:none;
-  transition:0.3s;
-}
-
-/* PRIMARY */
-.primary {
   background:#00aaff;
+  text-decoration:none;
   color:white;
-}
-
-.primary:hover {
-  background:#0284c7;
-  transform:translateY(-2px);
-}
-
-/* SECONDARY */
-.secondary {
-  border:1px solid white;
-  color:white;
-}
-
-.secondary:hover {
-  background:white;
-  color:black;
+  border-radius:5px;
 }
 </style>
-
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
   <div><b>Pooja Prakash</b></div>
   <div>
     <a href="about.html">About</a>
     <a href="experience.html">Work Experience</a>
     <a href="skills.html">Skills & Tools</a>
-    <a href="certificates.html">Certificates</a>
+    <a href="education.html">Education</a>
   </div>
 </div>
 
-<!-- HERO -->
 <div class="hero">
+  <div class="hero-text">
+    <h1>Bridging the Gap: From Tech Talk to Simple Speak</h1>
+    <p>
+      I design enterprise-grade documentation for Cloud, API, and AI systems —
+      improving adoption and reducing support dependency.
+    </p>
 
-  <h1>Bridging the Gap: From Tech Talk to Simple Speak</h1>
-
-  <p>
-    Hi, I'm <b>Pooja Prakash</b> — a Senior Technical Writer specializing in Cloud, API, and AI documentation.  
-    I design enterprise-grade content that improves product adoption and reduces support dependency.
-  </p>
-
-  <div class="cta-buttons">
-    <!-- DIFFERENT PURPOSE BUTTONS -->
-    <a class="btn primary" href="portfolio.html">View Portfolio</a>
-    <a class="btn secondary" href="contact.html">Hire Me</a>
+    <a class="btn" href="portfolio.html">View Portfolio</a>
+    <a class="btn" href="contact.html">Hire Me</a>
   </div>
-
 </div>
 
 </body>
