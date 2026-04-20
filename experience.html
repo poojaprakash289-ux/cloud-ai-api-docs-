@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Work Experience | Pooja Prakash</title>
+  <title>Experience | Pooja Prakash</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -17,7 +17,6 @@
     .navbar {
       display: flex;
       justify-content: space-between;
-      align-items: center;
       padding: 20px 50px;
       background: white;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -34,16 +33,26 @@
     .section h2 { text-align: center; margin-bottom: 20px; font-size: 28px; color: #1f2d3d; }
     .section p.section-intro { text-align: center; color: #555; margin-bottom: 40px; }
 
-    /* Accordion */
-    .accordion-item { margin-bottom: 10px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    .accordion-header { background: #00aaff; color: white; padding: 15px; font-weight: bold; cursor: pointer; border: none; width: 100%; text-align: left; }
-    .accordion-content { display: none; background: white; padding: 15px 20px; }
-    .accordion-content ul { margin: 0; padding-left: 20px; }
-
-    /* Grid Cards */
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 6px 14px rgba(0,0,0,0.08); }
-    .card h3 { color: #00aaff; margin-bottom: 10px; }
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+    th {
+      background: #00aaff;
+      color: white;
+    }
+    tr:last-child td { border-bottom: none; }
 
     /* Footer */
     .footer { text-align: center; padding: 40px; background: #1f2d3d; color: white; }
@@ -68,71 +77,86 @@
 <!-- WORK EXPERIENCE -->
 <div class="section" id="experience">
   <h2>Work Experience</h2>
-  <p class="section-intro">Click each role to see detailed responsibilities.</p>
+  <p class="section-intro">Detailed responsibilities across organizations.</p>
 
-  <div class="accordion">
-    <div class="accordion-item">
-      <button class="accordion-header">Technical Writer – Corent Technology (Sep 2024 – Present)</button>
-      <div class="accordion-content">
-        <ul>
-          <li>Develop documentation for cloud-based MaaS (Scan, Assessment, Migration) platform.</li>
-          <li>Create Web Help using RoboHelp aligned with standards.</li>
-          <li>Author guides, release notes, and internal docs.</li>
-          <li>Prepare customer-facing collateral (sell sheets, briefs).</li>
-          <li>Develop diagrams and workflow visuals.</li>
-          <li>Coordinate with product, engineering, and sales teams.</li>
-          <li>Utilize AI tools to accelerate drafts by 25–30%.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <button class="accordion-header">Technical Writer – IBM / Kyndryl (Mar 2019 – Oct 2022)</button>
-      <div class="accordion-content">
-        <ul>
-          <li>Documented enterprise storage environments.</li>
-          <li>Created templates and onboarding checklists.</li>
-          <li>Authored guides, FAQs, troubleshooting docs.</li>
-          <li>Documented hardware replacement and workflows.</li>
-          <li>Collaborated with SMEs for accuracy.</li>
-          <li>Trained freshers on storage concepts.</li>
-          <li>Ensured SLA and governance compliance.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <table>
+    <tr><th>Role</th><th>Organization</th><th>Period</th><th>Highlights</th></tr>
+    <tr>
+      <td>Technical Writer</td>
+      <td>Corent Technology – Chennai</td>
+      <td>Sep 2024 – Present</td>
+      <td>
+        • Documentation for MaaS platform<br>
+        • Web Help with RoboHelp<br>
+        • Guides, release notes, internal docs<br>
+        • Customer collateral (briefs, case studies)<br>
+        • Architecture diagrams & visuals<br>
+        • AI tools to accelerate drafts by 25–30%
+      </td>
+    </tr>
+    <tr>
+      <td>Technical Writer</td>
+      <td>IBM / Kyndryl – Chennai</td>
+      <td>Mar 2019 – Oct 2022</td>
+      <td>
+        • Documented enterprise storage environments<br>
+        • Templates & onboarding checklists<br>
+        • User guides, FAQs, troubleshooting docs<br>
+        • Hardware replacement workflows<br>
+        • Collaborated with SMEs<br>
+        • Trained freshers on storage concepts
+      </td>
+    </tr>
+  </table>
 </div>
 
-<!-- SKILLS -->
+<!-- SKILLS & TOOLS -->
 <div class="section" id="skills">
   <h2>Skills & Tools</h2>
-  <div class="grid">
-    <div class="card"><h3>Documentation & Content</h3><p>User Guides, Release Notes, API Docs, SOPs, Case Studies</p></div>
-    <div class="card"><h3>Documentation Tools</h3><p>RoboHelp, Oxygen XML (DITA), MS Office, Snagit, Adobe</p></div>
-    <div class="card"><h3>Collaboration & Tracking</h3><p>Jira, Confluence, GitHub</p></div>
-    <div class="card"><h3>Technical Exposure</h3><p>IBM Storage, Brocade Switches, Linux, Windows, AIX, NAS, Cloud SaaS</p></div>
-  </div>
+  <p class="section-intro">Core competencies and technical expertise.</p>
+
+  <table>
+    <tr><th>Skill</th><th>Level</th><th>Notes</th></tr>
+    <tr><td>Technical Documentation</td><td>⭐⭐⭐⭐⭐</td><td>User guides, release notes, API docs</td></tr>
+    <tr><td>Docs-as-Code</td><td>⭐⭐⭐⭐</td><td>DITA XML, structured publishing</td></tr>
+    <tr><td>Editing & Proofreading</td><td>⭐⭐⭐⭐</td><td>Peer reviews, clarity improvements</td></tr>
+    <tr><td>Collaboration Tools</td><td>⭐⭐⭐⭐⭐</td><td>Jira, Confluence, GitHub</td></tr>
+    <tr><td>Technical Exposure</td><td>⭐⭐⭐⭐</td><td>IBM Storage, Brocade, SaaS platforms</td></tr>
+  </table>
 </div>
 
 <!-- CERTIFICATIONS -->
 <div class="section" id="certifications">
   <h2>Certifications</h2>
-  <ul>
-    <li>ISTQB – Foundation Level</li>
-    <li>FinOps Foundation Certification</li>
-    <li>Google Certification</li>
-    <li>C Programming Workshop</li>
-  </ul>
+  <table>
+    <tr><th>Certification</th><th>Notes</th></tr>
+    <tr><td>ISTQB – Foundation Level</td><td>Software testing fundamentals</td></tr>
+    <tr><td>FinOps Foundation</td><td>Cloud financial operations</td></tr>
+    <tr><td>Google Certification</td><td>Cloud/technical specialization</td></tr>
+    <tr><td>C Programming Workshop</td><td>Programming fundamentals</td></tr>
+  </table>
 </div>
 
 <!-- EDUCATION -->
 <div class="section" id="education">
   <h2>Education</h2>
-  <ul>
-    <li><strong>B.Tech – Computer Engineering</strong>, S.P.B Patel Engineering College, Mahesana</li>
-    <li><strong>Higher Secondary (CBSE)</strong>, Coast Guard Public School, Daman</li>
-    <li><strong>Secondary School (CBSE)</strong>, Coast Guard Public School, Daman</li>
-  </ul>
+  <table>
+    <tr><th>Degree</th><th>Institution</th><th>Notes</th></tr>
+    <tr><td>B.Tech – Computer Engineering</td><td>S.P.B Patel Engineering College, Mahesana</td><td>Core engineering foundation</td></tr>
+    <tr><td>Higher Secondary (CBSE)</td><td>Coast Guard Public School, Daman</td><td>Science stream</td></tr>
+    <tr><td>Secondary School (CBSE)</td><td>Coast Guard Public School, Daman</td><td>General education</td></tr>
+  </table>
+</div>
+
+<!-- LANGUAGES -->
+<div class="section" id="languages">
+  <h2>Languages</h2>
+  <table>
+    <tr><th>Language</th><th>Level</th><th>Notes</th></tr>
+    <tr><td>English</td><td>⭐⭐⭐⭐⭐</td><td>Primary professional language, C2 level</td></tr>
+    <tr><td>Hindi</td><td>⭐⭐⭐⭐</td><td>Fluent, used in collaboration</td></tr>
+    <tr><td>Gujarati</td><td>⭐⭐⭐</td><td>Conversational, regional familiarity</td></tr>
+  </table>
 </div>
 
 <!-- FOOTER -->
@@ -144,17 +168,6 @@
     <a href="https://github.com/poojaprakash">GitHub</a>
   </p>
 </div>
-
-<script>
-  // Accordion toggle
-  const headers = document.querySelectorAll('.accordion-header');
-  headers.forEach(header => {
-    header.addEventListener('click', () => {
-      const content = header.nextElementSibling;
-      content.style.display = content.style.display === 'block' ? 'none' : 'block';
-    });
-  });
-</script>
 
 </body>
 </html>
