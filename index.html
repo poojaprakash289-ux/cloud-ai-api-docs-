@@ -1,68 +1,141 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Pooja Prakash</title>
+<title>Pooja Prakash | Senior Technical Writer</title>
 
 <style>
-body { margin:0; font-family:Segoe UI; color:white; }
-
-.navbar {
-  display:flex;
-  justify-content:space-between;
-  padding:20px 60px;
-  background:rgba(0,0,0,0.7);
-  position:absolute;
-  width:100%;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-.navbar a { color:white; margin-left:20px; text-decoration:none; }
+body{
+  font-family:'Segoe UI', sans-serif;
+  color:white;
+  overflow-x:hidden;
+}
 
-.hero {
+/* NAVBAR */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  z-index:10;
+  background:rgba(0,0,0,0.6);
+}
+
+.navbar a{
+  color:white;
+  margin-left:25px;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.navbar a:hover{
+  color:#00aaff;
+}
+
+/* HERO */
+.hero{
   height:100vh;
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  padding:0 80px;
-  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
-             url('assets/images/hero-bg.jpg') center/cover;
+  justify-content:center;
+  text-align:center;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+  url('assets/images/hero-bg.jpg') center/cover;
+
+  padding:0 20px;
 }
 
-.hero-text { max-width:500px; }
+/* TEXT */
+.hero h1{
+  font-size:48px;
+  margin-bottom:15px;
+}
 
-.btn {
-  padding:12px 20px;
+.hero p{
+  max-width:700px;
+  margin:auto;
+  color:#cbd5e1;
+  line-height:1.6;
+}
+
+/* BUTTONS */
+.cta{
+  margin-top:40px;
+}
+
+.btn{
+  padding:12px 22px;
   margin:10px;
-  background:#00aaff;
+  border-radius:6px;
   text-decoration:none;
+  transition:0.3s;
+}
+
+/* PRIMARY */
+.primary{
+  background:#00aaff;
   color:white;
-  border-radius:5px;
+}
+
+.primary:hover{
+  background:#0284c7;
+}
+
+/* SECONDARY */
+.secondary{
+  border:1px solid white;
+  color:white;
+}
+
+.secondary:hover{
+  background:white;
+  color:black;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
   <div><b>Pooja Prakash</b></div>
+
   <div>
     <a href="about.html">About</a>
     <a href="experience.html">Work Experience</a>
-    <a href="skills.html">Skills & Tools</a>
+    <a href="skills.html">Skills, Tools & Certificates</a>
     <a href="education.html">Education</a>
   </div>
 </div>
 
+<!-- HERO -->
 <div class="hero">
-  <div class="hero-text">
+
+  <div>
     <h1>Bridging the Gap: From Tech Talk to Simple Speak</h1>
+
     <p>
       I design enterprise-grade documentation for Cloud, API, and AI systems —
-      improving adoption and reducing support dependency.
+      helping teams improve adoption and reduce support dependency.
     </p>
 
-    <a class="btn" href="portfolio.html">View Portfolio</a>
-    <a class="btn" href="contact.html">Hire Me</a>
+    <div class="cta">
+      <a class="btn primary" href="portfolio.html">View Portfolio</a>
+      <a class="btn secondary" href="contact.html">Hire Me</a>
+    </div>
   </div>
+
 </div>
 
 </body>
