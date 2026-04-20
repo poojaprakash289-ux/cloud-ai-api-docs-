@@ -14,7 +14,7 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 40px 20px;
     }
@@ -22,52 +22,41 @@
     h1 {
       color: #008080;
       margin-bottom: 25px;
+      text-align: center;
     }
 
-    .timeline {
-      border-left: 3px solid #008080;
-      padding-left: 20px;
+    .job-card {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
 
-    .timeline-item {
-      margin-bottom: 40px;
-      position: relative;
-    }
-
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -11px;
-      top: 5px;
-      width: 16px;
-      height: 16px;
-      background: #20b2aa;
-      border-radius: 50%;
-    }
-
-    .timeline-item h2 {
+    .job-card h2 {
       margin: 0;
       font-size: 20px;
-      color: #ffd700;
-    }
-
-    .timeline-item h3 {
-      margin: 5px 0;
-      font-size: 16px;
       color: #008080;
     }
 
-    .timeline-item span {
+    .job-card h3 {
+      margin: 5px 0;
+      font-size: 16px;
+      color: #ffd700;
+    }
+
+    .job-card span {
       font-size: 14px;
       color: #555;
     }
 
-    .timeline-item ul {
-      margin: 10px 0 0;
+    .job-card ul {
+      margin: 15px 0 0;
       padding-left: 20px;
     }
 
-    .timeline-item ul li {
+    .job-card ul li {
       margin-bottom: 8px;
       font-size: 15px;
     }
@@ -96,43 +85,39 @@
 <div class="container">
   <h1>Work Experience</h1>
 
-  <div class="timeline">
+  <!-- Corent Technology -->
+  <div class="job-card">
+    <h2>Corent Technology – Chennai</h2>
+    <h3>Technical Writer</h3>
+    <span>Sep 2024 – Present</span>
+    <ul>
+      <li>Develop documentation for cloud-based MaaS (Scan, Assessment, Migration) platform.</li>
+      <li>Create Web Help using RoboHelp aligned with structured documentation standards.</li>
+      <li>Author user guides, prerequisites, release notes, and internal process documentation.</li>
+      <li>Prepare customer-facing collateral including sell sheets, solution briefs, and case studies.</li>
+      <li>Design architecture diagrams and workflow visuals to support customer and internal teams.</li>
+      <li>Coordinate with product, engineering, and sales teams to align documentation with release schedules.</li>
+      <li>Utilize AI tools to accelerate first drafts and improve turnaround time by 25–30% while ensuring accuracy.</li>
+    </ul>
+  </div>
 
-    <!-- Corent Technology -->
-    <div class="timeline-item">
-      <h2>Corent Technology – Chennai</h2>
-      <h3>Technical Writer</h3>
-      <span>Sep 2024 – Present</span>
-      <ul>
-        <li>Develop documentation for cloud-based MaaS (Scan, Assessment, Migration) platform.</li>
-        <li>Create Web Help using RoboHelp aligned with structured documentation standards.</li>
-        <li>Author user guides, prerequisites, release notes, and internal process documentation.</li>
-        <li>Prepare customer-facing collateral including sell sheets, solution briefs, and case studies.</li>
-        <li>Design architecture diagrams and workflow visuals to support customer and internal teams.</li>
-        <li>Coordinate with product, engineering, and sales teams to align documentation with release schedules.</li>
-        <li>Utilize AI tools to accelerate first drafts and improve turnaround time by 25–30% while ensuring accuracy.</li>
-      </ul>
-    </div>
-
-    <!-- IBM / Kyndryl -->
-    <div class="timeline-item">
-      <h2>IBM / Kyndryl – Chennai</h2>
-      <h3>Technical Writer</h3>
-      <span>Mar 2019 – Oct 2022</span>
-      <p><em>Project: Anthem (Enterprise Storage Environment)</em></p>
-      <ul>
-        <li>Documented and managed enterprise storage environments supporting critical operations.</li>
-        <li>Created standardized templates and onboarding checklists for IBM storage devices (SVC, XIV, Flash, V7000, A9k) and Brocade switches.</li>
-        <li>Authored user guides, FAQs, troubleshooting documents, and operational runbooks.</li>
-        <li>Documented hardware replacement procedures (HBA, SFP, cables) and decommissioning workflows.</li>
-        <li>Allocated switch ports for new build servers and maintained accurate documentation records.</li>
-        <li>Collaborated with 7+ SMEs to ensure accuracy and compliance with enterprise standards.</li>
-        <li>Participated in storage team calls with multiple stakeholders to support allocation and decommissioning activities.</li>
-        <li>Trained freshers on storage concepts, operational procedures, and documentation standards.</li>
-        <li>Ensured documentation alignment with SLA requirements and governance processes.</li>
-      </ul>
-    </div>
-
+  <!-- IBM / Kyndryl -->
+  <div class="job-card">
+    <h2>IBM / Kyndryl – Chennai</h2>
+    <h3>Technical Writer</h3>
+    <span>Mar 2019 – Oct 2022</span>
+    <p><em>Project: Anthem (Enterprise Storage Environment)</em></p>
+    <ul>
+      <li>Documented and managed enterprise storage environments supporting critical operations.</li>
+      <li>Created standardized templates and onboarding checklists for IBM storage devices (SVC, XIV, Flash, V7000, A9k) and Brocade switches.</li>
+      <li>Authored user guides, FAQs, troubleshooting documents, and operational runbooks.</li>
+      <li>Documented hardware replacement procedures (HBA, SFP, cables) and decommissioning workflows.</li>
+      <li>Allocated switch ports for new build servers and maintained accurate documentation records.</li>
+      <li>Collaborated with 7+ SMEs to ensure accuracy and compliance with enterprise standards.</li>
+      <li>Participated in storage team calls with multiple stakeholders to support allocation and decommissioning activities.</li>
+      <li>Trained freshers on storage concepts, operational procedures, and documentation standards.</li>
+      <li>Ensured documentation alignment with SLA requirements and governance processes.</li>
+    </ul>
   </div>
 </div>
 
