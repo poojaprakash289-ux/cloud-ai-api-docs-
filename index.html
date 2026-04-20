@@ -8,72 +8,80 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: #fdfdfd;
-      color: #333;
       display: flex;
       height: 100vh;
+      background: #fdfdfd;
+      color: #333;
     }
 
     /* LEFT PANEL */
     .left-panel {
-      width: 25%;
-      background: linear-gradient(180deg, #008080, #20b2aa);
-      color: white;
-      padding: 40px 30px;
+      width: 20%;
+      background: #fafafa;
+      padding: 30px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
+      border-right: 1px solid #ddd;
     }
-    .left-panel h3 {
-      color: #ffd700;
+    .career-highlights h3 {
+      color: #008080;
       margin-bottom: 15px;
-      font-size: 22px;
     }
-    .left-panel ul {
+    .career-highlights ul {
       list-style: none;
       padding: 0;
     }
-    .left-panel li {
+    .career-highlights li {
       margin-bottom: 10px;
-      font-size: 16px;
+      font-size: 15px;
+    }
+    .footer {
+      font-size: 13px;
+      color: #555;
+    }
+    .footer a {
+      color: #008080;
+      text-decoration: none;
+      margin-left: 8px;
     }
 
     /* HERO CENTER */
     .hero {
-      width: 55%;
+      width: 60%;
       background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
                   url('assets/images/hero-bg.jpg') center/cover;
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: left;
       padding: 60px;
+      text-align: left;
     }
     .hero-text {
       max-width: 600px;
     }
     .hero-text h1 {
-      font-size: 48px;
+      font-size: 42px;
       margin-bottom: 5px;
     }
     .hero-text h3 {
-      font-size: 22px;
+      font-size: 20px;
       color: #ffd700;
       margin-bottom: 20px;
     }
     .hero-text .tagline {
-      font-size: 20px;
+      font-size: 18px;
       font-style: italic;
       color: #e0e0e0;
       margin-bottom: 15px;
     }
     .hero-text p {
-      font-size: 16px;
+      font-size: 15px;
       margin-bottom: 25px;
     }
     .btn {
-      padding: 12px 20px;
+      padding: 10px 18px;
       border-radius: 5px;
       text-decoration: none;
       margin-right: 10px;
@@ -81,11 +89,11 @@
       transition: background 0.3s ease;
     }
     .btn-primary {
-      background: #20b2aa;
+      background: #008080;
       color: white;
     }
     .btn-primary:hover {
-      background: #008080;
+      background: #006666;
     }
     .btn-outline {
       border: 1px solid white;
@@ -94,6 +102,12 @@
     .btn-outline:hover {
       background: white;
       color: #333;
+    }
+    .hero-image img {
+      width: 200px;
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
     /* RIGHT NAVIGATION */
@@ -109,26 +123,12 @@
     .right-nav a {
       color: white;
       text-decoration: none;
-      margin: 10px 0;
+      margin: 12px 0;
       font-size: 16px;
       transition: color 0.3s ease;
     }
     .right-nav a:hover {
       color: #ffd700;
-    }
-
-    /* FOOTER */
-    .footer {
-      position: absolute;
-      bottom: 10px;
-      left: 30px;
-      font-size: 14px;
-      color: #fff;
-    }
-    .footer a {
-      color: #ffd700;
-      text-decoration: none;
-      margin-left: 10px;
     }
   </style>
 </head>
@@ -136,15 +136,18 @@
 
 <!-- LEFT PANEL -->
 <div class="left-panel">
-  <h3>Career Highlights</h3>
-  <ul>
-    <li><strong>5+</strong> Years in Cloud & AI Docs</li>
-    <li><strong>20+</strong> Enterprise Projects Delivered</li>
-    <li><strong>10+</strong> Tools Mastered (DITA, Swagger, Postman)</li>
-    <li><strong>100%</strong> Reviewer‑Ready Quality</li>
-  </ul>
+  <div class="career-highlights">
+    <h3>Career Highlights</h3>
+    <ul>
+      <li><strong>5+</strong> Years in Cloud & AI Docs</li>
+      <li><strong>20+</strong> Enterprise Projects Delivered</li>
+      <li><strong>10+</strong> Tools Mastered (DITA, Swagger, Postman)</li>
+      <li><strong>100%</strong> Reviewer‑Ready Quality</li>
+    </ul>
+  </div>
   <div class="footer">
-    © 2026 Pooja Prakash | Senior Technical Writer
+    © 2026 Pooja Prakash | Senior Technical Writer<br>
+    <a href="mailto:poojaprakash289@example.com">Email</a>
     <a href="https://linkedin.com/in/poojaprakash">LinkedIn</a>
     <a href="https://github.com/poojaprakash">GitHub</a>
   </div>
@@ -160,6 +163,9 @@
     <a class="btn btn-primary" href="portfolio.html">View Portfolio</a>
     <a class="btn btn-outline" href="mailto:poojaprakash289@example.com">Hire Me</a>
     <a class="btn btn-outline" href="resume.pdf">Download Resume</a>
+    <div class="hero-image">
+      <img src="assets/images/profile.jpg" alt="Pooja Prakash">
+    </div>
   </div>
 </div>
 
