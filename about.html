@@ -1,133 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>About Me</title>
-
+  <meta charset="UTF-8">
+  <title>About Me | Pooja Prakash</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f6f8;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
     }
 
-    /* HERO */
-    .hero {
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
-
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                  url('cloud-ai-api-docs-/assets/images/hero-bg.jpg') center/cover;
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
 
-    .hero h1 {
-      font-size: 36px;
+    h1, h2 {
+      color: #008080;
+      margin-bottom: 15px;
     }
 
-    /* CONTENT */
-    .section {
-      padding: 60px 50px;
+    p {
+      margin-bottom: 20px;
+      font-size: 16px;
     }
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
+    .timeline {
+      margin: 40px 0;
+      border-left: 3px solid #008080;
+      padding-left: 20px;
+    }
+    .timeline-item {
       margin-bottom: 25px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    }
+    .timeline-item h3 {
+      margin: 0;
+      color: #ffd700;
+      font-size: 18px;
+    }
+    .timeline-item p {
+      margin: 5px 0 0;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #00aaff;
-      color: white;
-      padding: 6px 12px;
-      margin: 5px;
-      border-radius: 20px;
-      font-size: 14px;
-    }
-
-    .quote {
-      font-style: italic;
-      font-size: 20px;
+    .philosophy {
+      background: #f0f8f8;
+      padding: 20px;
       text-align: center;
-      margin-top: 20px;
-      color: #555;
+      font-size: 16px;
+      color: #333;
+      border-radius: 8px;
+      margin-top: 40px;
     }
 
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #1f2d3d;
+      color: white;
+    }
+    .footer a {
+      color: #20b2aa;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #ffd700;
+    }
   </style>
 </head>
-
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <div>
-    <h1>About Me</h1>
-    <p>Transforming complexity into clarity</p>
-  </div>
-</div>
+<div class="container">
+  <h1>About Me</h1>
+  <p>I am a Senior Technical Writer with nearly a decade of experience in cloud, AI, and enterprise documentation. My role is about translating complex systems into clear language that helps teams adopt technology with confidence.</p>
 
-<!-- QUOTE -->
-<div class="section">
-  <p class="quote">
-    "Great documentation is not written — it is designed for clarity."
-  </p>
-</div>
-
-<!-- CAREER -->
-<div class="section">
   <h2>Career Journey</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>IBM / Kyndryl</h3>
+      <p>Documented enterprise storage environments, created onboarding guides, troubleshooting manuals, and operational workflows.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Corent Technology</h3>
+      <p>Specialized in SaaS and cloud migration documentation, producing structured Web Help, customer briefs, and workflow diagrams.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Future Goals</h3>
+      <p>Focus on AI and semiconductor documentation, building recruiter ready portfolio projects and demos.</p>
+    </div>
+  </div>
 
-  <div class="card">
-    IBM → Kyndryl → Corent Technology
+  <h2>Approach</h2>
+  <p>My philosophy is simple: empower users without overwhelming them. I embrace modern documentation practices like Docs as Code, using Git workflows and structured authoring with DITA XML, Swagger, and Postman. Visual storytelling is central to my work, with Snagit, Draw.io, and architecture diagrams making complex workflows intuitive.</p>
+
+  <h2>Personality</h2>
+  <p>Creativity and adaptability fuel my career. Inspired by continuous improvement, I refine processes incrementally and turn challenges into opportunities for growth. For me, technical writing is about helping people use technology effectively with clarity and confidence.</p>
+
+  <div class="philosophy">
+    Creativity | Adaptability | Continuous Improvement | User Empowerment
   </div>
 </div>
 
-<!-- SKILLS -->
-<div class="section">
-  <h2>Specialization</h2>
-
-  <div class="card">
-    <span class="tag">Cloud</span>
-    <span class="tag">API Documentation</span>
-    <span class="tag">Agentic AI</span>
-    <span class="tag">Docs-as-Code</span>
-    <span class="tag">DITA XML</span>
-  </div>
-</div>
-
-<!-- VALUE -->
-<div class="section">
-  <h2>What I Bring</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <b>Clarity</b><br><br>
-      Simplifying complex systems into user-friendly documentation.
-    </div>
-
-    <div class="card">
-      <b>Structure</b><br><br>
-      Designing scalable documentation architectures.
-    </div>
-
-    <div class="card">
-      <b>Impact</b><br><br>
-      Improving product adoption through better documentation.
-    </div>
-
-  </div>
+<div class="footer">
+  © 2026 Pooja Prakash | Senior Technical Writer
+  <br>
+  <a href="mailto:poojaprakash289@example.com">Email</a> |
+  <a href="https://linkedin.com/in/poojaprakash">LinkedIn</a> |
+  <a href="https://github.com/poojaprakash">GitHub</a>
 </div>
 
 </body>
