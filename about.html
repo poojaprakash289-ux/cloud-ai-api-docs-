@@ -1,133 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>About Me</title>
+<title>About</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f6f8;
-    }
+<style>
+body { margin:0; font-family:Segoe UI; background:#f4f6f8; }
 
-    /* HERO */
-    .hero {
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
+.hero {
+  height:250px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
 
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                  url('assets/images/hero-bg.jpg') center/cover;
-    }
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url('cloud-ai-api-docs-/assets/images/hero-bg.jpg') center/cover;
+}
 
-    .hero h1 {
-      font-size: 36px;
-    }
+.section { padding:60px; }
 
-    /* CONTENT */
-    .section {
-      padding: 60px 50px;
-    }
-
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      margin-bottom: 25px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #00aaff;
-      color: white;
-      padding: 6px 12px;
-      margin: 5px;
-      border-radius: 20px;
-      font-size: 14px;
-    }
-
-    .quote {
-      font-style: italic;
-      font-size: 20px;
-      text-align: center;
-      margin-top: 20px;
-      color: #555;
-    }
-
-  </style>
+.card {
+  background:white;
+  padding:30px;
+  border-radius:10px;
+  margin-bottom:20px;
+}
+</style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <div class="hero">
-  <div>
-    <h1>About Me</h1>
-    <p>Transforming complexity into clarity</p>
-  </div>
+  <h1>About Me</h1>
 </div>
 
-<!-- QUOTE -->
 <div class="section">
-  <p class="quote">
-    "Great documentation is not written — it is designed for clarity."
-  </p>
+
+<div class="card">
+<h2>My Approach</h2>
+<p>
+I treat documentation as a product — not a task.
+
+Every document I create is designed to reduce confusion,
+accelerate onboarding, and minimize support dependency.
+</p>
 </div>
 
-<!-- CAREER -->
-<div class="section">
-  <h2>Career Journey</h2>
-
-  <div class="card">
-    IBM → Kyndryl → Corent Technology
-  </div>
+<div class="card">
+<h2>Career Journey</h2>
+<p>
+IBM → Kyndryl → Corent Technology  
+Working across cloud systems, APIs, and enterprise workflows.
+</p>
 </div>
 
-<!-- SKILLS -->
-<div class="section">
-  <h2>Specialization</h2>
-
-  <div class="card">
-    <span class="tag">Cloud</span>
-    <span class="tag">API Documentation</span>
-    <span class="tag">Agentic AI</span>
-    <span class="tag">Docs-as-Code</span>
-    <span class="tag">DITA XML</span>
-  </div>
+<div class="card">
+<h2>What Makes Me Different</h2>
+<p>
+I focus on clarity, structure, and usability — ensuring users don’t just read documentation, but successfully use it.
+</p>
 </div>
 
-<!-- VALUE -->
-<div class="section">
-  <h2>What I Bring</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <b>Clarity</b><br><br>
-      Simplifying complex systems into user-friendly documentation.
-    </div>
-
-    <div class="card">
-      <b>Structure</b><br><br>
-      Designing scalable documentation architectures.
-    </div>
-
-    <div class="card">
-      <b>Impact</b><br><br>
-      Improving product adoption through better documentation.
-    </div>
-
-  </div>
 </div>
 
 </body>
