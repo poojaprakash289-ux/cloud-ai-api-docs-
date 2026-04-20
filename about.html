@@ -1,154 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>About Me</title>
+<title>About</title>
 
 <style>
-body {
-  margin:0;
-  font-family: 'Segoe UI', sans-serif;
-  background:#0f172a;
-  color:white;
-}
+body { margin:0; font-family:Segoe UI; background:#0f172a; color:white; }
 
-/* NAVBAR */
-.navbar {
-  display:flex;
-  justify-content:space-between;
-  padding:20px 50px;
-  background:#020617;
-}
+.navbar { display:flex; justify-content:space-between; padding:20px 50px; background:#020617; }
+.navbar a { color:white; margin-left:20px; text-decoration:none; }
 
-.navbar a {
-  color:white;
-  text-decoration:none;
-  margin-left:20px;
-}
-
-/* HERO */
 .hero {
-  height:300px;
+  height:250px;
   display:flex;
   align-items:center;
   justify-content:center;
-  text-align:center;
-
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
-              url('assets/images/hero-bg.jpg') center/cover;
+  background:url('assets/images/hero-bg.jpg') center/cover;
 }
 
-.hero h1 {
-  font-size:40px;
-}
+.section { padding:60px; }
 
-/* SECTION */
-.section {
-  padding:80px 60px;
-}
-
-/* GLASS CARD */
 .card {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  padding:30px;
-  border-radius:12px;
-  margin-bottom:25px;
-  border:1px solid rgba(255,255,255,0.1);
-}
-
-/* GRID */
-.grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-/* TAG */
-.tag {
-  display:inline-block;
-  padding:6px 12px;
-  margin:5px;
-  background:#00aaff;
-  border-radius:20px;
-}
-
-/* QUOTE */
-.quote {
-  font-size:22px;
-  text-align:center;
-  color:#94a3b8;
-  margin-bottom:40px;
+  background:rgba(255,255,255,0.05);
+  padding:25px;
+  margin-bottom:20px;
+  border-radius:10px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <div class="navbar">
   <div><b>Pooja Prakash</b></div>
   <div>
     <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
     <a href="experience.html">Experience</a>
+    <a href="portfolio.html">Portfolio</a>
     <a href="contact.html">Contact</a>
   </div>
 </div>
 
-<!-- HERO -->
-<div class="hero">
-  <h1>About Me</h1>
-</div>
+<div class="hero"><h1>About Me</h1></div>
 
-<!-- CONTENT -->
 <div class="section">
-
-<p class="quote">
-“I don’t write documentation — I design clarity into complex systems.”
-</p>
 
 <div class="card">
 <h2>My Approach</h2>
-<p>
-I treat documentation as a product. Every guide is structured to reduce friction,
-improve onboarding, and eliminate confusion.
-</p>
+<p>I treat documentation as a product—focused on clarity, usability, and impact.</p>
 </div>
 
 <div class="card">
-<h2>Career Journey</h2>
-<p>
-IBM → Kyndryl → Corent Technology  
-Working across cloud platforms, APIs, and AI-driven systems.
-</p>
+<h2>Career</h2>
+<p>IBM → Kyndryl → Corent Technology</p>
 </div>
 
 <div class="card">
-<h2>Specialization</h2>
-<span class="tag">Cloud</span>
-<span class="tag">API Docs</span>
-<span class="tag">Agentic AI</span>
-<span class="tag">Docs-as-Code</span>
-<span class="tag">DITA XML</span>
-</div>
-
-<div class="grid">
-
-<div class="card">
-<b>Clarity</b><br><br>
-Simplifying complex systems into usable content.
-</div>
-
-<div class="card">
-<b>Structure</b><br><br>
-Designing scalable documentation systems.
-</div>
-
-<div class="card">
-<b>Impact</b><br><br>
-Improving adoption and reducing support effort.
-</div>
-
+<h2>Focus</h2>
+<p>Cloud | API | AI | Docs-as-Code</p>
 </div>
 
 </div>
