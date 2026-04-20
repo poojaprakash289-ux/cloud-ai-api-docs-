@@ -128,28 +128,34 @@
       color: #555;
     }
 
-    /* GRID CARDS */
-    .grid {
+    /* WHAT I DO */
+    .what-i-do {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      text-align: center;
     }
-    .card {
+    .do-card {
       background: white;
-      padding: 25px;
+      padding: 30px;
       border-radius: 12px;
       box-shadow: 0 6px 14px rgba(0,0,0,0.08);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .card:hover {
+    .do-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0,0,0,0.12);
     }
-    .card h3 {
-      margin-bottom: 10px;
-      color: #00aaff;
+    .do-card img {
+      width: 80px;
+      margin-bottom: 20px;
     }
-    .card p {
+    .do-card h3 {
+      margin-bottom: 15px;
+      color: #00aaff;
+      font-size: 20px;
+    }
+    .do-card p {
       font-size: 15px;
       color: #555;
     }
@@ -249,18 +255,22 @@
 <!-- WHAT I DO -->
 <div class="section">
   <h2>What I Do</h2>
-  <div class="grid">
-    <div class="card">
+  <p class="section-intro">I simplify complexity through clear writing, structured content, and user-friendly experiences.</p>
+  <div class="what-i-do">
+    <div class="do-card">
+      <img src="assets/icons/technical-writing.png" alt="Technical Writing Icon">
       <h3>Technical Writing</h3>
-      <p>Clear API docs that cut onboarding time by 40% and accelerate adoption across enterprise teams.</p>
+      <p>I transform “geek speak” into clear, accessible guides and manuals that make complex systems easy to understand.</p>
     </div>
-    <div class="card">
+    <div class="do-card">
+      <img src="assets/icons/information-architecture.png" alt="Information Architecture Icon">
       <h3>Information Architecture</h3>
-      <p>Designed modular doc sets for IBM Cloud, improving navigation and reducing support tickets.</p>
+      <p>I organize content into intuitive structures, ensuring users find the information they need without confusion.</p>
     </div>
-    <div class="card">
+    <div class="do-card">
+      <img src="assets/icons/ux-writing.png" alt="UX Writing Icon">
       <h3>UX Writing</h3>
-      <p>Created intuitive microcopy for enterprise dashboards, boosting task completion rates by 25%.</p>
+      <p>I craft microcopy that guides users seamlessly, turning potential confusion into clarity and confidence.</p>
     </div>
   </div>
 </div>
@@ -270,20 +280,4 @@
   <img src="assets/images/profile.jpg" alt="Pooja Prakash">
   <div>
     <h2>About Me</h2>
-    <p>Senior Technical Writer with 5+ years of experience at IBM, Kyndyl, and Corent Technology. Specialized in Cloud, API, and AI documentation with expertise in Docs-as-Code publishing and DITA XML.</p>
-    <p>I help enterprises scale documentation that accelerates adoption, reduces support costs, and showcases innovation.</p>
-  </div>
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-  <p>© 2026 Pooja Prakash | Senior Technical Writer</p>
-  <p>
-    <a href="resume.pdf">Download Resume</a> |
-    <a href="https://linkedin.com/in/poojaprakash">LinkedIn</a> |
-    <a href="https://github.com/poojaprakash">GitHub</a>
-  </p>
-</div>
-
-</body>
-</html>
+    <p>Senior Technical
