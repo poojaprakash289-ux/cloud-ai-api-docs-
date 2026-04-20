@@ -1,48 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>About</title>
+<title>About Me</title>
 
 <style>
-body { margin:0; font-family:Segoe UI; background:#f4f6f8; }
+body {
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background:#0f172a;
+  color:white;
+}
 
+/* NAVBAR */
+.navbar {
+  display:flex;
+  justify-content:space-between;
+  padding:20px 50px;
+  background:#020617;
+}
+
+.navbar a {
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+}
+
+/* HERO */
 .hero {
-  height:250px;
+  height:300px;
   display:flex;
   align-items:center;
   justify-content:center;
-  color:white;
+  text-align:center;
 
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-              url('cloud-ai-api-docs-/assets/images/hero-bg.jpg') center/cover;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+              url('assets/images/hero-bg.jpg') center/cover;
 }
 
-.section { padding:60px; }
+.hero h1 {
+  font-size:40px;
+}
 
+/* SECTION */
+.section {
+  padding:80px 60px;
+}
+
+/* GLASS CARD */
 .card {
-  background:white;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
   padding:30px;
-  border-radius:10px;
-  margin-bottom:20px;
+  border-radius:12px;
+  margin-bottom:25px;
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+/* TAG */
+.tag {
+  display:inline-block;
+  padding:6px 12px;
+  margin:5px;
+  background:#00aaff;
+  border-radius:20px;
+}
+
+/* QUOTE */
+.quote {
+  font-size:22px;
+  text-align:center;
+  color:#94a3b8;
+  margin-bottom:40px;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
+<div class="navbar">
+  <div><b>Pooja Prakash</b></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+
+<!-- HERO -->
 <div class="hero">
   <h1>About Me</h1>
 </div>
 
+<!-- CONTENT -->
 <div class="section">
+
+<p class="quote">
+“I don’t write documentation — I design clarity into complex systems.”
+</p>
 
 <div class="card">
 <h2>My Approach</h2>
 <p>
-I treat documentation as a product — not a task.
-
-Every document I create is designed to reduce confusion,
-accelerate onboarding, and minimize support dependency.
+I treat documentation as a product. Every guide is structured to reduce friction,
+improve onboarding, and eliminate confusion.
 </p>
 </div>
 
@@ -50,15 +119,36 @@ accelerate onboarding, and minimize support dependency.
 <h2>Career Journey</h2>
 <p>
 IBM → Kyndryl → Corent Technology  
-Working across cloud systems, APIs, and enterprise workflows.
+Working across cloud platforms, APIs, and AI-driven systems.
 </p>
 </div>
 
 <div class="card">
-<h2>What Makes Me Different</h2>
-<p>
-I focus on clarity, structure, and usability — ensuring users don’t just read documentation, but successfully use it.
-</p>
+<h2>Specialization</h2>
+<span class="tag">Cloud</span>
+<span class="tag">API Docs</span>
+<span class="tag">Agentic AI</span>
+<span class="tag">Docs-as-Code</span>
+<span class="tag">DITA XML</span>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<b>Clarity</b><br><br>
+Simplifying complex systems into usable content.
+</div>
+
+<div class="card">
+<b>Structure</b><br><br>
+Designing scalable documentation systems.
+</div>
+
+<div class="card">
+<b>Impact</b><br><br>
+Improving adoption and reducing support effort.
+</div>
+
 </div>
 
 </div>
