@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UX Writing | Portfolio – Pooja Prakash</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #008080;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #008080;
+      margin-top: 25px;
+    }
+
+    p, li {
+      font-size: 15px;
+    }
+
+    .highlight-box {
+      background: #f0f8f8;
+      border-left: 5px solid #008080;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 6px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #008080;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #1f2d3d;
+      color: white;
+      margin-top: 40px;
+    }
+
+    .footer a {
+      color: #20b2aa;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>UX Writing</h1>
+
+  <h2>Overview</h2>
+  <p>I contributed to the product experience by working closely with design and engineering teams to craft clear, concise, and intuitive microcopy across the platform. My focus was on simplifying complex workflows and ensuring users could easily understand and navigate key functionalities.</p>
+
+  <p>The product involved multi-step processes such as scanning, assessment, migration planning, and execution. This required careful attention to element naming, action clarity, and logical flow to guide users through each stage seamlessly.</p>
+
+  <h2>Key Contributions</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Workflow & Action Screens</h3>
+      <p>Designed microcopy for multi-step workflows, ensuring users clearly understand actions such as initiating scans, reviewing assessments, and executing migrations. Emphasis was placed on reducing ambiguity and improving task completion.</p>
+    </div>
+
+    <div class="card">
+      <h3>Configuration & Setup Screens</h3>
+      <p>Created clear and structured instructions for setup and configuration steps, helping users complete complex technical tasks with confidence and minimal errors.</p>
+    </div>
+
+    <div class="card">
+      <h3>Data & Insights Screens</h3>
+      <p>Refined labels, tooltips, and descriptions for dashboards and reports to ensure users can easily interpret insights, recommendations, and system outputs.</p>
+    </div>
+
+    <div class="card">
+      <h3>Empty State Screens</h3>
+      <p>Developed meaningful empty states that guide users on next steps, ensuring engagement even when no data is available.</p>
+    </div>
+
+    <div class="card">
+      <h3>Validation & Error Messages</h3>
+      <p>Crafted precise and actionable error messages and validation prompts to help users quickly identify issues and resolve them without confusion.</p>
+    </div>
+
+    <div class="card">
+      <h3>User Interaction & Feedback</h3>
+      <p>Improved system feedback messages (success, warning, progress states) to provide clarity and reassurance during critical operations.</p>
+    </div>
+  </div>
+
+  <h2>Outcome</h2>
+  <div class="highlight-box">
+    <p>By refining microcopy and aligning it with user workflows, I helped create a more intuitive and seamless user experience. The content ensured clarity across complex processes, reduced user friction, and improved overall usability of the platform.</p>
+  </div>
+</div>
+
+<div class="footer">
+  © 2026 Pooja Prakash | Senior Technical Writer
+  <br>
+  <a href="mailto:poojaprakash289@example.com">Email</a> |
+  <a href="https://linkedin.com/in/poojaprakash">LinkedIn</a> |
+  <a href="https://github.com/poojaprakash">GitHub</a>
+</div>
+
+</body>
+</html>
