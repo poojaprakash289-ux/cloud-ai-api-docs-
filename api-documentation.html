@@ -1,26 +1,230 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>API Documentation</title>
-</head>
+  <meta charset="UTF-8">
+  <title>API Documentation | CloudOps SaaS Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
 
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h1, h2, h3 {
+      color: #008080;
+      margin-top: 25px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .meta {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 15px;
+      color: #555;
+    }
+
+    p, li {
+      font-size: 15px;
+    }
+
+    ul {
+      margin: 10px 0 20px;
+      padding-left: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #f0f8f8;
+      color: #008080;
+    }
+
+    code {
+      background: #f4f4f4;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    pre {
+      background: #f4f4f4;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 14px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #1f2d3d;
+      color: white;
+      margin-top: 40px;
+    }
+
+    .footer a {
+      color: #20b2aa;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #ffd700;
+    }
+  </style>
+</head>
 <body>
 
-<h1>API Documentation</h1>
+<div class="container">
+  <h1>API Documentation – Sample</h1>
+  <div class="meta">
+    <p><strong>Product:</strong> CloudOps SaaS Platform | <strong>API Version:</strong> v1 | <strong>Protocol:</strong> HTTPS</p>
+    <p><strong>Base URL:</strong> https://api.cloudops-platform.com/v1</p>
+  </div>
 
-<h2>Overview</h2>
-<p>Developed API documentation using OpenAPI and Postman.</p>
+  <h2>1. Overview</h2>
+  <p>The CloudOps API enables developers to programmatically interact with the platform to manage resources, automate workflows, and retrieve operational insights. Designed with REST principles, the API supports secure, scalable integration across cloud and enterprise environments.</p>
 
-<h2>Work Done</h2>
-<ul>
-  <li>Defined request/response structure</li>
-  <li>Created sample payloads</li>
-  <li>Improved developer usability</li>
-</ul>
+  <h2>2. Authentication</h2>
+  <p>All API requests must be authenticated using a Bearer token.</p>
+  <p><span class="highlight">Header Format:</span></p>
+  <pre><code>Authorization: Bearer &lt;API_KEY&gt;</code></pre>
+  <p><span class="highlight">Example Request:</span></p>
+  <pre><code>curl -X GET "https://api.cloudops-platform.com/v1/resources" \
+  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+  <ul>
+    <li>Keep API keys secure and never expose them in public repositories</li>
+    <li>Rotate keys periodically for security</li>
+    <li>Use environment variables to store credentials</li>
+  </ul>
 
-<img src="../assets/images/api-doc.png" width="600">
+  <h2>3. Common Request Headers</h2>
+  <table>
+    <tr><th>Header</th><th>Description</th></tr>
+    <tr><td>Authorization</td><td>Bearer token for authentication</td></tr>
+    <tr><td>Content-Type</td><td>application/json</td></tr>
+    <tr><td>Accept</td><td>application/json</td></tr>
+  </table>
 
-<a href="../portfolio.html">⬅ Back to Portfolio</a>
+  <h2>4. Endpoints</h2>
 
-</body>
-</html>
+  <h3>4.1 Get All Resources</h3>
+  <p><strong>Endpoint:</strong> GET /resources</p>
+  <table>
+    <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+    <tr><td>type</td><td>string</td><td>Filter resources by type</td></tr>
+    <tr><td>status</td><td>string</td><td>Filter by active/inactive</td></tr>
+    <tr><td>region</td><td>string</td><td>Filter by region</td></tr>
+  </table>
+  <pre><code>curl -X GET "https://api.cloudops-platform.com/v1/resources?status=active" \
+  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+  <pre><code>{
+  "status": "success",
+  "data": [
+    {
+      "id": "res_12345",
+      "name": "VM-Production-01",
+      "type": "virtual_machine",
+      "status": "active",
+      "region": "us-east-1"
+    }
+  ]
+}</code></pre>
+
+  <h3>4.2 Create Resource</h3>
+  <p><strong>Endpoint:</strong> POST /resources</p>
+  <pre><code>{
+  "name": "VM-Test-01",
+  "type": "virtual_machine",
+  "region": "us-west-2"
+}</code></pre>
+  <pre><code>curl -X POST "https://api.cloudops-platform.com/v1/resources" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"name":"VM-Test-01","type":"virtual_machine","region":"us-west-2"}'</code></pre>
+  <pre><code>{
+  "status": "success",
+  "message": "Resource created successfully",
+  "resource_id": "res_67890"
+}</code></pre>
+
+  <h3>4.3 Delete Resource</h3>
+  <p><strong>Endpoint:</strong> DELETE /resources/{id}</p>
+  <table>
+    <tr><th>Parameter</th><th>Description</th></tr>
+    <tr><td>id</td><td>Unique resource identifier</td></tr>
+  </table>
+  <pre><code>curl -X DELETE "https://api.cloudops-platform.com/v1/resources/res_67890" \
+  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+  <pre><code>{
+  "status": "success",
+  "message": "Resource deleted successfully"
+}</code></pre>
+
+  <h2>5. Error Handling</h2>
+  <table>
+    <tr><th>Code</th><th>Meaning</th></tr>
+    <tr><td>400</td><td>Bad Request</td></tr>
+    <tr><td>401</td><td>Unauthorized</td></tr>
+    <tr><td>404</td><td>Not Found</td></tr>
+    <tr><td>500</td><td>Internal Server Error</td></tr>
+  </table>
+  <pre><code>{
+  "status": "error",
+  "error_code": 401,
+  "message": "Unauthorized access. Invalid API key."
+}</code></pre>
+
+  <h2>6. Rate Limiting</h2>
+  <p>Default limit: 100 requests per minute. Exceeding the limit returns HTTP 429.</p>
+
+  <h2>7. Best Practices</h2>
+  <ul>
+    <li>Use pagination for large datasets</li>
+    <li>Implement retry logic for transient failures</li>
+    <li>Avoid hardcoding API keys</li>
+    <li>Validate inputs before sending requests</li>
+  </ul>
+
+  <h2>8. Security Considerations</h2>
+  <ul>
+    <li>Always use HTTPS for communication</li>
+    <li>Store API keys securely (vaults or environment variables)</li>
+    <li>Restrict API access using IP whitelisting where possible</li>
+    <li>Monitor API usage for anomalies</li>
+  </ul>
+</div>
+
+<div class="footer">
+  © 2026 Pooja Prakash | Senior Technical Writer
+  <br>
+  <a href="mailto:poojaprakash289@example.com">Email</a> |
+  <a href="https://linkedin.com/in/poojaprakash">LinkedIn</a> |
+  <a href="https://github.com
