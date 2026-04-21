@@ -1,61 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Portfolio | Pooja Prakash</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
 
-<style>
-body { margin:0; font-family:Segoe UI; background:#0f172a; color:white; }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
 
-.navbar { display:flex; justify-content:space-between; padding:20px 50px; background:#020617; }
-.navbar a { color:white; margin-left:20px; text-decoration:none; }
+    h1 {
+      text-align: center;
+      color: #008080;
+      margin-bottom: 40px;
+    }
 
-.grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-  padding:60px;
-}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
 
-.card {
-  background:rgba(255,255,255,0.05);
-  padding:25px;
-  border-radius:10px;
-}
+    .card {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+      text-align: center;
+    }
 
-a { color:#00aaff; text-decoration:none; }
-</style>
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin: 0 0 15px;
+      font-size: 18px;
+      color: #008080;
+    }
+
+    .card p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #008080;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background: #20b2aa;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #1f2d3d;
+      color: white;
+      margin-top: 40px;
+    }
+
+    .footer a {
+      color: #20b2aa;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #ffd700;
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="navbar">
-  <div><b>Pooja Prakash</b></div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="experience.html">Experience</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
+<div class="container">
+  <h1>Portfolio Showcase</h1>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Configuration Guide</h2>
+      <p>Step-by-step SaaS configuration workflows with RBAC, integrations, and security hardening.</p>
+      <a href="configure.html" class="btn">View Guide</a>
+    </div>
+
+    <div class="card">
+      <h2>Agentic AI Documentation</h2>
+      <p>Explaining agentic AI workflows, architecture diagrams, and developer onboarding notes.</p>
+      <a href="agentic-ai.html" class="btn">View Doc</a>
+    </div>
+
+    <div class="card">
+      <h2>Release Notes</h2>
+      <p>Structured release notes highlighting new features, fixes, and upgrade instructions.</p>
+      <a href="release-notes.html" class="btn">View Notes</a>
+    </div>
+
+    <div class="card">
+      <h2>API Documentation</h2>
+      <p>REST API reference with endpoints, parameters, authentication, and sample calls.</p>
+      <a href="api-docs.html" class="btn">View Docs</a>
+    </div>
+
+    <div class="card">
+      <h2>Case Studies</h2>
+      <p>Customer success stories and solution briefs showcasing adoption and ROI.</p>
+      <a href="case-studies.html" class="btn">View Case Studies</a>
+    </div>
+
+    <div class="card">
+      <h2>UX Writing Samples</h2>
+      <p>Microcopy examples for onboarding flows, error messages, and feature prompts.</p>
+      <a href="ux-writing.html" class="btn">View Samples</a>
+    </div>
   </div>
 </div>
 
-<div class="grid">
-
-<div class="card">
-Agentic AI Docs<br>
-<a href="projects/agentic-ai.html">View</a>
-</div>
-
-<div class="card">
-API Docs<br>
-<a href="projects/api-documentation.html">View</a>
-</div>
-
-<div class="card">
-Cloud Migration Docs<br>
-<a href="projects/cloud-migration.html">View</a>
-</div>
-
+<div class="footer">
+  © 2026 Pooja Prakash | Senior Technical Writer
+  <br>
+  <a href="mailto:poojaprakash289@example.com">Email</a> |
+  <a href="https://linkedin.com/in/poojaprakash">LinkedIn</a> |
+  <a href="https://github.com/poojaprakash">GitHub</a>
 </div>
 
 </body>
