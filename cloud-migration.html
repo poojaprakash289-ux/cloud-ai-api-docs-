@@ -1,26 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Cloud Migration Documentation</title>
-</head>
+  <meta charset="UTF-8">
+  <title>Cloud Migration | GCP Lift-and-Shift</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
 
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #008080;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .step-number {
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      background: #008080;
+      color: white;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 50%;
+      font-size: 14px;
+    }
+
+    .card h2 {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #008080;
+    }
+
+    .card p {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #1f2d3d;
+      color: white;
+      margin-top: 40px;
+    }
+
+    .footer a {
+      color: #20b2aa;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #ffd700;
+    }
+  </style>
+</head>
 <body>
 
-<h1>Cloud Migration Documentation</h1>
+<div class="container">
+  <h1>GCP Lift-and-Shift Migration</h1>
 
-<h2>Overview</h2>
-<p>Documented SaaS migration workflow from assessment to execution.</p>
+  <div class="grid">
+    <div class="card"><div class="step-number">1</div><h2>Create GCP Project</h2><p>Create a new project in Google Cloud Platform and enable billing.</p></div>
+    <div class="card"><div class="step-number">2</div><h2>Configure IAM Access</h2><p>Assign required roles and permissions to users and service accounts.</p></div>
+    <div class="card"><div class="step-number">3</div><h2>Enable Required APIs</h2><p>Enable Compute Engine and migration-related APIs in the project.</p></div>
+    <div class="card"><div class="step-number">4</div><h2>Set Up Virtual Network (VPC)</h2><p>Create VPC, define subnets, and configure IP ranges.</p></div>
+    <div class="card"><div class="step-number">5</div><h2>Configure Firewall Rules</h2><p>Allow required inbound and outbound traffic for migration and application access.</p></div>
+    <div class="card"><div class="step-number">6</div><h2>Establish Connectivity</h2><p>Set up VPN or direct connectivity between source environment and GCP.</p></div>
+    <div class="card"><div class="step-number">7</div><h2>Prepare Source Environment</h2><p>Validate OS compatibility, clean up unused data, and ensure system readiness.</p></div>
+    <div class="card"><div class="step-number">8</div><h2>Install Required Agents</h2><p>Install migration or replication agents on source systems where required.</p></div>
+    <div class="card"><div class="step-number">9</div><h2>Configure Migration Service</h2><p>Set up Migrate to Virtual Machines and create a migration project.</p></div>
+    <div class="card"><div class="step-number">10</div><h2>Register Source Environment</h2><p>Add source infrastructure (VMware/physical servers) to the migration service.</p></div>
+    <div class="card"><div class="step-number">11</div><h2>Discover Workloads</h2><p>Scan and list all available virtual machines and applications.</p></div>
+    <div class="card"><div class="step-number">12</div><h2>Select Workloads</h2><p>Choose specific VMs and group them into batches for migration.</p></div>
+    <div class="card"><div class="step-number">13</div><h2>Configure Replication Settings</h2><p>Define replication frequency, storage, and target configuration.</p></div>
+    <div class="card"><div class="step-number">14</div><h2>Initiate Data Replication</h2><p>Start replicating workloads from source to GCP.</p></div>
+    <div class="card"><div class="step-number">15</div><h2>Monitor Replication</h2><p>Track synchronization status and resolve any replication issues.</p></div>
+    <div class="card"><div class="step-number">16</div><h2>Test Clone Migration</h2><p>Create a test instance in GCP to validate workload behavior.</p></div>
+    <div class="card"><div class="step-number">17</div><h2>Validate Test Environment</h2><p>Verify application functionality, performance, and connectivity.</p></div>
+    <div class="card"><div class="step-number">18</div><h2>Schedule Migration Cutover</h2><p>Plan migration window to minimize business impact.</p></div>
+    <div class="card"><div class="step-number">19</div><h2>Execute Final Cutover</h2><p>Stop source workloads and perform final migration to GCP.</p></div>
+    <div class="card"><div class="step-number">20</div><h2>Launch Instances</h2><p>Start migrated virtual machines in the cloud environment.</p></div>
+    <div class="card"><div class="step-number">21</div><h2>Configure Networking</h2><p>Assign IPs, attach to subnets, and configure load balancers if required.</p></div>
+    <div class="card"><div class="step-number">22</div><h2>Update DNS Configuration</h2><p>Redirect traffic to the new cloud-hosted applications.</p></div>
+    <div class="card"><div class="step-number">23</div><h2>Post-Migration Validation</h2><p>Check application functionality, data integrity, and performance.</p></div>
+    <div class="card"><div class="step-number">24</div><h2>Enable Monitoring</h2><p>Set up monitoring tools and alerts for system health.</p></div>
+    <div class="card"><div class="step-number">25</div><h2>Optimize Resources</h2><p>Right-size VM instances and storage based on usage.</p></div>
+    <div class="card"><div class="step-number">26</div><h2>Implement Backup</h2><p>Configure backup policies and disaster recovery setup.</p></div>
+    <div class="card"><div class="step-number">27</div><h2>Decommission Source Systems</h2><p>Shut down or archive legacy systems after successful migration.</p></div>
+    <div class="card"><div class="step-number">28</div><h2>Perform Cost Optimization</h2><p>Review and optimize cloud usage to reduce costs.</p></div>
+  </div>
+</div>
 
-<h2>Process</h2>
-<ul>
-  <li>Scan → Assess → Migrate</li>
-  <li>Defined onboarding steps</li>
-  <li>Created workflow diagrams</li>
-</ul>
-
-<img src="../assets/images/cloud-workflow.png" width="600">
-
-<a href="../portfolio.html">⬅ Back to Portfolio</a>
+<div class="footer">
+  © 2026 Pooja Prakash | Senior Technical Writer
+  <br>
+  <a href="mailto:poojaprakash289@example.com">Email</a> |
+  <a href="https://linkedin.com/in/poojaprakash">LinkedIn</a> |
+  <a href="https://github.com/poojaprakash">GitHub</a>
+</div>
 
 </body>
 </html>
