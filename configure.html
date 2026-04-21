@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SaaS Configuration Guide | Pooja Prakash</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h1, h2, h3 {
+      color: #008080;
+      margin-top: 25px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    p, li {
+      font-size: 15px;
+    }
+
+    ul {
+      margin: 10px 0 20px;
+      padding-left: 20px;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #008080;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #f0f8f8;
+      color: #008080;
+    }
+
+    code {
+      background: #f4f4f4;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    pre {
+      background: #f4f4f4;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #1f2d3d;
+      color: white;
+      margin-top: 40px;
+    }
+
+    .footer a {
+      color: #20b2aa;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>SaaS Configuration Guide</h1>
+  <p><span class="highlight">Product:</span> CloudOps SaaS Platform (Representative Sample)<br>
+     <span class="highlight">Document Type:</span> Configuration & Enablement Guide<br>
+     <span class="highlight">Audience:</span> Developers, DevOps Engineers, Cloud Architects</p>
+
+  <h2>1. Overview</h2>
+  <p>This guide outlines a step-by-step approach to configuring a multi-tenant cloud operations platform, enabling developers to onboard environments, integrate services, and enforce secure access controls.</p>
+
+  <h2>2. Objectives</h2>
+  <ul>
+    <li>Configure a secure multi-tenant SaaS environment</li>
+    <li>Set up role-based access for development teams</li>
+    <li>Integrate external cloud services via APIs</li>
+    <li>Establish network and security boundaries</li>
+    <li>Validate platform readiness for development workflows</li>
+  </ul>
+
+  <h2>3. Configuration Flow</h2>
+  <p><span class="highlight">Access → Tenant Setup → Identity & Access → Features → Integrations → Security → Validation</span></p>
+
+  <h2>4. Prerequisites</h2>
+  <h3>4.1 Access & Permissions</h3>
+  <ul>
+    <li>Administrator access to SaaS platform</li>
+    <li>API access enabled for the tenant</li>
+  </ul>
+  <h3>4.2 Environment Readiness</h3>
+  <ul>
+    <li>Stable network connectivity</li>
+    <li>Outbound HTTPS access enabled</li>
+  </ul>
+  <h3>4.3 Security Readiness</h3>
+  <ul>
+    <li>Defined user roles and access policies</li>
+    <li>Secure storage for credentials (vault recommended)</li>
+  </ul>
+
+  <h2>5. Step-by-Step Configuration</h2>
+
+  <h3>5.1 Platform Access & Initialization</h3>
+  <ol>
+    <li>Access the SaaS portal using administrator credentials</li>
+    <li>Navigate to the <span class="highlight">Admin Console</span></li>
+    <li>Verify account status and subscription availability</li>
+  </ol>
+  <p><span class="highlight">Outcome:</span> Platform access is validated and ready for configuration</p>
+
+  <h3>5.2 Tenant Provisioning</h3>
+  <ol>
+    <li>Navigate to <span class="highlight">Tenant Management</span></li>
+    <li>Create a new tenant with: Tenant Name, Deployment Region, Environment Type</li>
+    <li>Initialize tenant services</li>
+  </ol>
+  <p><span class="highlight">Best Practice:</span> Use naming conventions aligned with environment and team<br>
+     <span class="highlight">Outcome:</span> Dedicated tenant environment is created</p>
+
+  <h3>5.3 Identity & Access Configuration (RBAC)</h3>
+  <ol>
+    <li>Go to <span class="highlight">User & Access Management</span></li>
+    <li>Add users with required details</li>
+    <li>Assign roles based on responsibilities</li>
+  </ol>
+  <table>
+    <tr><th>Role</th><th>Access Scope</th></tr>
+    <tr><td>Admin</td><td>Full control</td></tr>
+    <tr><td>Developer</td><td>Resource configuration</td></tr>
+    <tr><td>Viewer</td><td>Read-only access</td></tr>
+  </table>
+  <p><span class="highlight">Outcome:</span> Secure and structured access control is established</p>
+
+  <h3>5.5 API Configuration & Access Management</h3>
+  <ol>
+    <li>Go to <span class="highlight">API Settings</span></li>
+    <li>Generate API credentials</li>
+    <li>Define scope and permissions</li>
+    <li>Store credentials securely</li>
+  </ol>
+  <p><span class="highlight">Example Usage:</span></p>
+  <pre><code>curl -X GET "https://api.cloudops-platform.com/v1/resources" \
+  -H "Authorization: Bearer &lt;API_KEY&gt;"</code></pre>
+
+  <h2>6. Validation & Verification</h2>
+  <ul>
+    <li>Login using different roles (Admin, Developer, Viewer)</li>
+    <li>Validate API responses</li>
+    <li>Verify integration status</li>
+    <li>Execute a sample workflow</li>
+  </ul>
+
+  <h2>7. Troubleshooting Guide</h2>
+  <table>
+    <tr><th>Issue</th><th>Root Cause</th><th>Resolution</th></tr>
+    <tr><td>Unable to login</td><td>Incorrect role assignment</td><td>Reassign role</td></tr>
+    <tr><td>API failure</td><td>Invalid token</td><td>Regenerate API key</td></tr>
+    <tr><td>Integration error</td><td>Credential mismatch</td><td>Revalidate credentials</td></tr>
+    <tr><td>Connectivity issue</td><td>Port blocked</td><td>Update firewall rules</td></tr>
+  </table>
+
+  <h2>8. Best Practices</h2>
+  <ul>
+    <li>Follow least privilege access model</li>
+    <li>Rotate API keys periodically</li>
+    <li>Enable monitoring and alerts</li>
+    <li>Maintain environment separation (Dev/Test/Prod)</li>
+  </ul>
+
+  <h2>10. Developer Value Highlights</h2>
+  <ul>
+    <li>Designed end-to-end SaaS configuration workflows</li>
+    <li>Implemented RBAC-based access models</li>
+    <li>Enabled secure API-driven integrations</li>
+    <li>Applied cloud security best practices</li>
+    <li>Structured multi-tenant environment configuration</li>
+  </ul>
+
+  <h2>Portfolio Positioning</h2>
+  <p><span class="highlight">Title:</span> Enterprise SaaS Configuration Guide<br>
+     <span class="highlight">One-line Description:</span> Designed a structured, secure, and scalable SaaS configuration framework covering tenant provisioning, RBAC, integrations, and security hardening.</p>
+</div>
+
+<div class="footer">
+  © 2026 Pooja Prakash | Senior Technical Writer
+  <br>
+  <a href="mailto:poojaprakash289@example.com">
