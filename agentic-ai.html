@@ -1,46 +1,229 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Agentic AI Case Study</title>
+  <meta charset="UTF-8">
+  <title>Agentic AI – Architecture & Implementation Guide | Pooja Prakash</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
 
-<style>
-body { font-family:Segoe UI; margin:0; background:#f4f6f8; }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
 
-.section { padding:60px; }
+    h1, h2, h3 {
+      color: #008080;
+      margin-top: 25px;
+    }
 
-.card {
-  background:white;
-  padding:25px;
-  margin-bottom:20px;
-  border-radius:10px;
-}
-</style>
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    p, li {
+      font-size: 15px;
+    }
+
+    ul {
+      margin: 10px 0 20px;
+      padding-left: 20px;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #008080;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #f0f8f8;
+      color: #008080;
+    }
+
+    code {
+      background: #f4f4f4;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    pre {
+      background: #f4f4f4;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #1f2d3d;
+      color: white;
+      margin-top: 40px;
+    }
+
+    .footer a {
+      color: #20b2aa;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #ffd700;
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="section">
+<div class="container">
+  <h1>Agentic AI – Architecture & Implementation Guide</h1>
+  <p><span class="highlight">Version:</span> 1.0<br>
+     <span class="highlight">Date:</span> April 21, 2026<br>
+     <span class="highlight">Author:</span> Pooja Prakash<br>
+     <span class="highlight">Document Type:</span> Conceptual and Implementation Guide<br>
+     <span class="highlight">Audience:</span> Developers, AI Engineers, Solution Architects</p>
 
-<h1>Agentic AI Documentation</h1>
+  <h2>Disclaimer</h2>
+  <p>The information in this document is provided for reference and implementation guidance purposes only. Specifications and architectural patterns may evolve based on advancements in AI frameworks and enterprise requirements.</p>
 
-<div class="card">
-<h2>Problem</h2>
-AI workflows were complex and lacked clarity.
+  <h2>1. Overview</h2>
+  <p>Agentic AI represents a paradigm shift from traditional reactive AI systems to <span class="highlight">autonomous, goal-driven agents</span> capable of planning, executing, and refining actions independently. This guide provides a structured blueprint for developers building scalable, production-ready agent architectures.</p>
+
+  <h2>2. Prerequisites</h2>
+  <ul>
+    <li>Python 3.10+ with pip</li>
+    <li>Access to an LLM provider (OpenAI, Anthropic, etc.)</li>
+    <li>Familiarity with REST APIs & async programming</li>
+    <li>Version control with Git</li>
+  </ul>
+
+  <h2>3. Core Characteristics</h2>
+  <ul>
+    <li>Interpret goals intelligently</li>
+    <li>Decompose complex tasks</li>
+    <li>Interact with external systems</li>
+    <li>Evaluate outcomes continuously</li>
+    <li>Retain contextual memory</li>
+  </ul>
+
+  <h2>4. Architectural Design</h2>
+  <pre><code>┌─────────────────┐   ┌──────────────────┐
+│   User Input    │───│ Interaction Layer │
+│ (Chat/API/UI)   │   │   (Goal Parser)  │
+└─────────────────┘   └──────────────────┘
+                            │
+                            ▼
+┌─────────────────┐   ┌──────────────────┐
+│   Agent Core    │◄──│   Memory Layer   │
+│ (LLM Reasoning) │   │ (Short/Long-term)│
+└─────────────────┘   └──────────────────┘
+                            │
+                            ▼
+┌─────────────────┐   ┌──────────────────┐
+│ Tooling Layer   │───│ Execution Layer  │
+│ (APIs/Tools)    │   │ (Action/Feedback)│
+└─────────────────┘   └──────────────────┘</code></pre>
+
+  <h2>5. Agent Workflow</h2>
+  <p><span class="highlight">Lifecycle:</span> Input → Plan → Act → Observe → Reflect → Repeat</p>
+
+  <h2>6. Implementation Approach</h2>
+  <pre><code>while not goal_achieved:
+    plan = generate_plan(goal, context)
+    action = execute_task(plan)
+    result = observe(action)
+    context = update_memory(result)</code></pre>
+
+  <h2>7. Tool Integration Strategy</h2>
+  <table>
+    <tr><th>Tool Category</th><th>Purpose</th><th>Example</th></tr>
+    <tr><td>Data APIs</td><td>Retrieve metrics</td><td>Cloud monitoring APIs</td></tr>
+    <tr><td>Automation Tools</td><td>Execute changes</td><td>Infrastructure scripts</td></tr>
+    <tr><td>Validation Systems</td><td>Verify actions</td><td>Alerts, thresholds</td></tr>
+    <tr><td>Reporting Tools</td><td>Output results</td><td>Dashboards, spreadsheets</td></tr>
+  </table>
+
+  <h2>8. Memory System Design</h2>
+  <ul>
+    <li>Short-term memory (session context)</li>
+    <li>Long-term memory (historical insights)</li>
+    <li>Semantic retrieval mechanisms</li>
+  </ul>
+
+  <h2>9. Production Guardrails</h2>
+  <ul>
+    <li>Restrict actions via whitelists</li>
+    <li>Human approval workflows</li>
+    <li>Budget and usage limits</li>
+    <li>Audit logs for compliance</li>
+  </ul>
+
+  <h2>10. Deployment Architecture</h2>
+  <pre><code>┌──────────────┐    ┌──────────────┐
+│   API Layer  │───│ Task Queue    │
+│  (FastAPI)   │    │ (Celery)     │
+└──────────────┘    └──────────────┘
+       │                   │
+       ▼                   ▼
+┌──────────────┐    ┌──────────────┐
+│   Redis      │    │   Database   │
+│ (Session)    │    │ (Audit Logs) │
+└──────────────┘    └──────────────┘</code></pre>
+
+  <h2>11. Monitoring & Observability</h2>
+  <ul>
+    <li>Task success rate & completion time</li>
+    <li>Resource & cost optimization outcomes</li>
+    <li>API usage & token consumption</li>
+    <li>Error rates across tools</li>
+  </ul>
+
+  <h2>12. Scaling Strategy</h2>
+  <ul>
+    <li>Horizontal scaling with distributed workers</li>
+    <li>Role-based agent specialization</li>
+    <li>GPU acceleration for reasoning tasks</li>
+    <li>Caching frequently used plans</li>
+  </ul>
+
+  <h2>13. Security Considerations</h2>
+  <ul>
+    <li>Secure API keys (no hardcoding)</li>
+    <li>Encryption in transit and at rest</li>
+    <li>Strict role-based access control</li>
+    <li>Audit all agent actions</li>
+  </ul>
+
+  <h2>14. Conclusion</h2>
+  <p>Agentic AI systems combine reasoning, execution, and adaptability into a unified framework. By following structured architecture and strong guardrails, organizations can unlock significant value through intelligent, autonomous systems.</p>
 </div>
 
-<div class="card">
-<h2>Solution</h2>
-Designed structured documentation with workflows and diagrams.
-</div>
-
-<div class="card">
-<h2>Impact</h2>
-Improved onboarding and reduced confusion.
-</div>
-
-<img src="../assets/images/ai-workflow.png" width="600">
-
-</div>
-
-</body>
-</html>
+<div class="footer">
+  © 2026 Pooja Prakash | Senior Technical Writer
+  <br>
+  <a href="mailto:poojaprakash289@example.com">Email</a> |
+  <a href="
